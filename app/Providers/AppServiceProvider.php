@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        setlocale(LC_TIME, config('boilerplate.time.locale'));
+
+        \Carbon\Carbon::setLocale(config('app.locale'));
     }
 
     /**
