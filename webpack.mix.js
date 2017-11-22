@@ -12,11 +12,12 @@ let mix = require('laravel-mix');
  */
 
 mix.autoload({
-    jquery: ['$', 'jQuery', 'window.jQuery']
+    'jquery/dist/jquery.slim': ['$', 'jQuery', 'window.jQuery'],
+    'popper.js/dist/popper.js': ['Popper']
 });
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .extract(['axios', 'bootstrap-sass', 'jquery', 'lodash', 'vue'])
+   .extract(['axios', 'bootstrap', 'lodash', 'vue'])
    .sass('resources/assets/sass/app.scss', 'public/css')
    .sourceMaps()
    .version();
