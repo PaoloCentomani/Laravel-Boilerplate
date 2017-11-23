@@ -50,3 +50,8 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+/**
+ * Prevent opening links in Safari when in Web Clip mode.
+ */
+require('./includes/ios-webclip-fix');

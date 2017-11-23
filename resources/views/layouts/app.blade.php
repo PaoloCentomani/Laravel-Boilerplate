@@ -12,6 +12,14 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    {{-- Web App --}}
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="{{ config('app.name', 'Laravel') }}">
+    <link rel="apple-touch-startup-image" href="{{ url('apple-touch-startup-image.png') }}">
+    <link rel="manifest" href="{{ url('site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url('safari-pin-icon.svg') }}" color="#000">
 </head>
 <body>
     <div id="app">
