@@ -30,6 +30,7 @@
         </header>
 
         <main class="app-content">
+            @include('shared.flash')
             @yield('content')
         </main>
 

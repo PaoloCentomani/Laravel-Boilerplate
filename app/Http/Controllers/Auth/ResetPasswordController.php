@@ -39,4 +39,17 @@ class ResetPasswordController extends Controller
     {
         return route('home');
     }
+
+    /**
+     * Get the response for a successful password reset.
+     *
+     * @param  string  $response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    protected function sendResetResponse($response)
+    {
+        flash()->success(trans($response));
+
+        return redirect($this->redirectPath());
+    }
 }
