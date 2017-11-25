@@ -2,12 +2,13 @@
 
 namespace App;
 
+use App\Support\Gravatar\HasGravatar;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use HasGravatar, Notifiable;
 
     /**
      * The table associated with the model.
