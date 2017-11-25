@@ -24,7 +24,7 @@
     @yield('head')
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="{{ $classes }}">
         <header class="app-header">
             @include('shared.header')
         </header>
