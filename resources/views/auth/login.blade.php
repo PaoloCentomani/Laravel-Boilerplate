@@ -5,14 +5,14 @@
     <div class="row">
         <div class="ml-auto mr-auto col-lg-5 mt-4">
             <div class="card">
-                <div class="card-header">Login</div>
+                <div class="card-header">@lang('messages.login')</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label for="email">E-Mail Address</label>
+                            <label for="email">@lang('messages.email')</label>
 
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <label for="password">@lang('messages.password')</label>
 
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
@@ -39,17 +39,17 @@
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Remember Me</span>
+                                <span class="custom-control-description">@lang('messages.remember_me')</span>
                             </label>
                         </div>
 
                         <div class="form-group mb-0 d-flex justify-content-between">
                             <button type="submit" class="btn btn-primary">
-                                Login
+                                @lang('messages.login')
                             </button>
 
                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                Forgot Your Password?
+                                @lang('messages.forgot_password')
                             </a>
                         </div>
                     </form>

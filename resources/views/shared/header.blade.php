@@ -21,10 +21,10 @@
                 {{-- Authentication Links --}}
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">@lang('messages.login')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        <a class="nav-link" href="{{ route('register') }}">@lang('messages.register')</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
@@ -36,7 +36,7 @@
                         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-navbar-user">
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Logout
+                                    @lang('messages.logout')
                                 </a>
 
                                 <form method="POST" action="{{ route('logout') }}" class="d-none" id="logout-form">
