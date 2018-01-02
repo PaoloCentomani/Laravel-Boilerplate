@@ -1,5 +1,28 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+if (! function_exists('active')) {
+    /**
+     * Determine if one of the given route names is active.
+     *
+     * @param  mixed  $routes
+     * @return void
+     */
+    function active($routes, $class = ' active')
+    {
+        $current = Route::currentRouteName();
+        $routes = array_wrap($routes);
+
+        foreach ($routes as $route) {
+            if ($route === $current) {
+                echo $class;
+                break;
+            }
+        }
+    }
+}
+
 if (! function_exists('flash')) {
     /**
      * Create a flash message.

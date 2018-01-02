@@ -21,10 +21,10 @@
                 {{-- Authentication Links --}}
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">@lang('messages.login')</a>
+                        <a class="nav-link{{ active('login') }}" href="{{ route('login') }}">@lang('messages.login')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">@lang('messages.register')</a>
+                        <a class="nav-link{{ active('register') }}" href="{{ route('register') }}">@lang('messages.register')</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
