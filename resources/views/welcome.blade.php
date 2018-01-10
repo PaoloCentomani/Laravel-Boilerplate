@@ -79,7 +79,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Boilerplate
+                {{ config('app.name') }}
             </div>
 
             <div class="links">
