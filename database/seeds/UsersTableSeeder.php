@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
 
         foreach ($users as $user) {
             $user['password'] = bcrypt('secret');
-            $user['remember_token'] = str_random(60);
             $user['created_at'] = '2017-11-22 14:00:00';
             $user['updated_at'] = '2017-11-22 14:00:00';
 
