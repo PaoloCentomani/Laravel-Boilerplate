@@ -20,4 +20,10 @@ return [
     'reset_password'   => 'Reset Password',
     'send_reset_link'  => 'Send Password Reset Link',
 
+    // Errors...
+    '404' => 'Page not found.',
+    '419' => 'Session expired. Please refresh and try again.',
+    '500' => 'There was an error.',
+    '503' => 'Be right back.',
+
 ];
