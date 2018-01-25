@@ -23,8 +23,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('head')
 </head>
-<body>
-    <div id="app" class="{{ $classes }}">
+<body class="{{ $classes }}">
+    <div id="app">
         <header class="app-header">
             @include('shared.header')
         </header>
