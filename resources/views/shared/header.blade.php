@@ -29,8 +29,8 @@
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="app-navbar-user" href="#" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                            <img class="float-left mr-2 rounded-circle gravatar" src="{{ Auth::user()->gravatar }}" width="28" height="28">
-                            {{ Auth::user()->name }}
+                            <img class="float-left mr-2 rounded-circle gravatar" src="{{ $loggedInUser->gravatar }}" width="28" height="28">
+                            {{ $loggedInUser->name }}
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-navbar-user">

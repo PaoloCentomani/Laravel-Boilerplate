@@ -17,6 +17,7 @@ class AppComposer
     public function compose(View $view)
     {
         $view->with('classes', implode(' ', $this->classes()));
+        $view->with('loggedInUser', Auth::user());
     }
 
     /**
