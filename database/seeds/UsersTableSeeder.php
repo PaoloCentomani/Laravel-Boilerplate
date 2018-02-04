@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $users = [
-            ['name' => 'Paolo Centomani', 'email' => 'paolo@boilerplate.dev'],
+            ['name' => 'Paolo Centomani', 'email' => 'paolo@boilerplate.test'],
         ];
 
         foreach ($users as $user) {
