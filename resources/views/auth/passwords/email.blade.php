@@ -15,7 +15,7 @@
                     @endif
 
                     <form method="POST" action="{{ route('password.email') }}">
-                        {{ csrf_field() }}
+                        @csrf
 
                         <div class="form-group">
                             <label for="email">@lang('messages.email')</label>

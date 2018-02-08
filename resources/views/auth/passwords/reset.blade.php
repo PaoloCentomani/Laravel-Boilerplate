@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.request') }}">
-                        {{ csrf_field() }}
+                        @csrf
 
                         <input type="hidden" name="token" value="{{ $token }}">
 
@@ -40,7 +40,13 @@
                         <div class="form-group">
                             <label for="password-confirm">@lang('messages.password_confirm')</label>
 
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" required>
+
+                            @if ($errors->has('password_confirmation'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('password_confirmation') }}
+                                </div>
+                            @endif
                         </div>
 
                         <div class="form-group mb-0">

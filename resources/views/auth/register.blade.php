@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+                        @csrf
 
                         <div class="form-group">
                             <label for="name">@lang('messages.full_name')</label>
