@@ -6,11 +6,11 @@
         </a>
 
         {{-- Collapsed Hamburger --}}
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-controls="app-navbar-collapse" aria-expanded="false" aria-label="{{ trans('app.toggle_navigation') }}">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="{{ __('Toggle Navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar-supported-content">
             {{-- Left Side Of Navbar --}}
             <ul class="navbar-nav">
                 &nbsp;
@@ -21,29 +21,27 @@
                 {{-- Authentication Links --}}
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link{{ active('login') }}" href="{{ route('login') }}">@lang('messages.login')</a>
+                        <a class="nav-link{{ active('login') }}" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link{{ active('register') }}" href="{{ route('register') }}">@lang('messages.register')</a>
+                        <a class="nav-link{{ active('register') }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="app-navbar-user" href="#" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <a class="nav-link dropdown-toggle" id="navbar-dropdown" href="#" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" role="button" v-pre>
                             <img class="float-left mr-2 rounded-circle gravatar" src="{{ $loggedInUser->gravatar }}" width="28" height="28">
                             {{ $loggedInUser->name }}
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-navbar-user">
-                            <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    @lang('messages.logout')
-                                </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-                                <form method="POST" action="{{ route('logout') }}" class="d-none" id="logout-form">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
+                            <form method="POST" action="{{ route('logout') }}" class="d-none" id="logout-form">
+                                @csrf
+                            </form>
+                        </div>
                     </li>
                 @endguest
             </ul>

@@ -1,3 +1,3 @@
 @extends('layouts.error')
 
-@section('message', trans('messages.404'))
+@section('message', __('Page not found.'))

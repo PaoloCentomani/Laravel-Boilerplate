@@ -5,7 +5,7 @@
     <div class="row">
         <div class="ml-auto mr-auto col-lg-5 mt-4">
             <div class="card">
-                <div class="card-header">@lang('messages.reset_password')</div>
+                <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -18,7 +18,7 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="email">@lang('messages.email')</label>
+                            <label for="email">{{ __('E-Mail Address') }}</label>
 
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
@@ -31,7 +31,7 @@
 
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
-                                @lang('messages.send_reset_link')
+                                {{ __('Send Password Reset Link') }}
                             </button>
                         </div>
                     </form>

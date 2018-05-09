@@ -3,7 +3,7 @@
         <div class="container mt-3">
             <div class="alert alert-{{ $message->level }}{{ $message->important ? ' alert-important' : '' }}" role="alert">
                 @if (! $message->important)
-                    <button type="button" class="close" data-dismiss="alert" aria-label="{{ trans('app.close') }}">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="{{ __('Close') }}">
                         <span aria-hidden="true">×</span>
                     </button>
                 @endif

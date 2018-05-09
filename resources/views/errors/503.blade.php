@@ -1,3 +1,3 @@
 @extends('layouts.error')
 
-@section('message', trans('messages.503'))
+@section('message', __('Be right back.'))

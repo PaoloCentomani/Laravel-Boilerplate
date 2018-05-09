@@ -1,3 +1,3 @@
 @extends('layouts.error')
 
-@section('message', trans('messages.419'))
+@section('message', __('Session expired. Please refresh and try again.'))

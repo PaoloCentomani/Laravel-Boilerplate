@@ -1,3 +1,3 @@
 @extends('layouts.error')
 
-@section('message', trans('messages.500'))
+@section('message', __('There was an error.'))
