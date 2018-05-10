@@ -1,5 +1,7 @@
 let mix = require('laravel-mix');
 
+require('laravel-mix-purgecss');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -22,5 +24,6 @@ mix.webpackConfig({
 mix.js('resources/assets/js/app.js', 'public/js')
    .extract(['axios', 'bootstrap', 'lodash', 'jquery/dist/jquery.slim', 'vue'])
    .sass('resources/assets/sass/app.scss', 'public/css')
-   .sourceMaps()
-   .version();
+   .purgeCss({whitelist: ['show']});
+
+mix.inProduction() ? mix.version() : mix.sourceMaps();
