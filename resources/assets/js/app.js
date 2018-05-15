@@ -15,6 +15,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.directive('focus', require('./directives/FocusDirective.js'));
 
 const app = new Vue({
     el: '#app'

@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail Address') }}</label>
 
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required v-focus>
 
                             @if ($errors->has('email'))
                                 <div class="invalid-feedback">

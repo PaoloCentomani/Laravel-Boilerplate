@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="name">{{ __('Full Name') }}</label>
 
-                            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required v-focus>
 
                             @if ($errors->has('name'))
                                 <div class="invalid-feedback">
