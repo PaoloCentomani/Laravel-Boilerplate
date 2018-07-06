@@ -18,7 +18,7 @@ return [
     'after'                => 'Il campo :attribute deve essere una data successiva al :date.',
     'after_or_equal'       => 'Il campo :attribute deve essere una data successiva o pari al :date.',
     'alpha'                => 'Il campo :attribute può contenere solo lettere.',
-    'alpha_dash'           => 'Il campo :attribute può contenere solo lettere, numeri e trattini.',
+    'alpha_dash'           => 'Il campo :attribute può contenere solo lettere, numeri, trattini e trattini bassi.',
     'alpha_num'            => 'Il campo :attribute può contenere solo lettere e numeri.',
     'array'                => 'Il campo :attribute deve essere un array.',
     'before'               => 'Il campo :attribute deve essere una data antecedente al :date.',
