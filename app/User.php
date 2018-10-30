@@ -4,6 +4,7 @@ namespace App;
 
 use App\Support\Gravatar\HasGravatar;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable

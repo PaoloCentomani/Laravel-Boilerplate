@@ -28,21 +28,5 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('flash', function () {
             return $this->app->make(\App\Support\Flash\Notifier::class);
         });
-
-        if ($this->app->environment('local')) {
-            $this->setupLocalEnvironment();
-        }
-    }
-
-    /**
-     * Configure the development environment.
-     *
-     * @return void
-     */
-    protected function setupLocalEnvironment()
-    {
-        $this->app->singleton(\Faker\Generator::class, function () {
-            return \Faker\Factory::create('it_IT');
-        });
     }
 }

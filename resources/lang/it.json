@@ -1,10 +1,14 @@
 {
+    "A fresh verification link has been sent to your email address.": "Un nuovo link di verifica è stato inviato al tuo indirizzo e-mail.",
     "Be right back.": "Torniamo subito.",
+    "Before proceeding, please check your email for a verification link.": "Per continuare, controlla la tua casella e-mail: ti abbiamo inviato un link di verifica.",
+    "click here to request another": "richiedine un’altra",
     "Close": "Chiudi",
     "Confirm Password": "Conferma password",
     "E-Mail Address": "Indirizzo e-mail",
     "Forgot Password?": "Password dimenticata?",
     "Full Name": "Nome e cognome",
+    "If you did not receive the email": "Se non hai ricevuto nessuna e-mail",
     "Login": "Entra",
     "Logout": "Esci",
     "Page not found.": "Pagina non trovata.",
@@ -15,5 +19,6 @@
     "Reset Password": "Reimposta password",
     "Send Password Reset Link": "Invia istruzioni per la reimpostazione",
     "There was an error.": "Si è verificato un errore.",
-    "Toggle Navigation": "Mostra o nascondi la navigazione"
+    "Toggle Navigation": "Mostra o nascondi la navigazione",
+    "Verify Your Email Address": "Verifica il tuo indirizzo e-mail"
 }

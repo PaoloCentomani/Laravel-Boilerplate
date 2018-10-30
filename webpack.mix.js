@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 require('laravel-mix-purgecss');
 
@@ -21,9 +21,9 @@ mix.webpackConfig({
     }
 });
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/js/app.js', 'public/js')
    .extract(['axios', 'bootstrap', 'lodash', 'jquery/dist/jquery.slim', 'vue'])
-   .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/sass/app.scss', 'public/css')
    .purgeCss({whitelist: ['show']});
 
 mix.inProduction() ? mix.version() : mix.sourceMaps();

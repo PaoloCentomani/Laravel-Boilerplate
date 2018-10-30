@@ -23,7 +23,7 @@
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required v-focus>
 
                             @if ($errors->has('email'))
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback" role="alert">
                                     {{ $errors->first('email') }}
                                 </div>
                             @endif
