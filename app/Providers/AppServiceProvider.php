@@ -28,5 +28,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('flash', function () {
             return $this->app->make(\App\Support\Flash\Notifier::class);
         });
+
+        if ($this->app->isLocal()) {
+            $this->app->register(TelescopeServiceProvider::class);
+        }
     }
 }
