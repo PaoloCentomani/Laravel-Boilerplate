@@ -22,7 +22,7 @@ mix.webpackConfig({
 });
 
 mix.js('resources/js/app.js', 'public/js')
-   .extract(['axios', 'bootstrap', 'lodash', 'jquery/dist/jquery.slim', 'vue'])
+   .extract()
    .sass('resources/sass/app.scss', 'public/css')
    .purgeCss({whitelist: ['show']});
 
