@@ -18,8 +18,8 @@ class UsersTableSeeder extends Seeder
 
         foreach ($users as $user) {
             $user['password'] = Hash::make('secret');
-            $user['created_at'] = '2017-11-22 14:00:00';
-            $user['updated_at'] = '2017-11-22 14:00:00';
+            $user['created_at'] = '2018-12-16 14:00:00';
+            $user['updated_at'] = '2018-12-16 14:00:00';
 
             DB::table('users')->insert($user);
         }
