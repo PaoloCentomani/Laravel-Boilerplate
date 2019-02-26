@@ -8,6 +8,16 @@ use Illuminate\Support\ServiceProvider;
 class BladeServiceProvider extends ServiceProvider
 {
     /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+    /**
      * Bootstrap the application services.
      *
      * @return void
@@ -19,15 +29,5 @@ class BladeServiceProvider extends ServiceProvider
 
             return "<?php include resource_path('svg/{$expression}.svg'); ?>";
         });
-    }
-
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }

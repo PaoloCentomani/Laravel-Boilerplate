@@ -8,6 +8,16 @@ use Illuminate\Support\ServiceProvider;
 class ComposerServiceProvider extends ServiceProvider
 {
     /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+    /**
      * Bootstrap the application services.
      *
      * @return void
@@ -17,15 +27,5 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer(
             'layouts.app', \App\Http\ViewComposers\AppComposer::class
         );
-    }
-
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }

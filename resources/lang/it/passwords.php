@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'password' => 'La password deve essere di almeno sei caratteri e deve coincidere con la conferma.',
+    'password' => 'La password deve essere di almeno 8 caratteri e deve coincidere con la conferma.',
     'reset' => 'La password è stata reimpostata!',
     'sent' => 'Ti abbiamo inviato le istruzioni per reimpostare la password!',
     'token' => 'Questo token per la reimpostazione della password non è valido.',

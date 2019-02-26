@@ -2,7 +2,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ config('app.name') }}</title>
@@ -86,7 +85,7 @@
             </div>
 
             <div class="links">
-                <a href="https://laravel.com/docs" target="_blank">Documentation</a>
+                <a href="https://laravel.com/docs" target="_blank">Docs</a>
                 <a href="https://github.com/laravel/laravel" target="_blank">GitHub</a>
             </div>
         </div>
