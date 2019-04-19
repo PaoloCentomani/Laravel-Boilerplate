@@ -24,6 +24,6 @@ mix.webpackConfig({
 mix.js('resources/js/app.js', 'public/js')
    .extract()
    .sass('resources/sass/app.scss', 'public/css')
-   .purgeCss({whitelist: ['show']});
+   .purgeCss({ whitelist: ['show'] });
 
 mix.inProduction() ? mix.version() : mix.sourceMaps();
