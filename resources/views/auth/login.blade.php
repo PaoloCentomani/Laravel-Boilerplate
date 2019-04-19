@@ -16,11 +16,11 @@
 
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required{{ old('email') ? '' : ' v-focus' }}>
 
-                            @if ($errors->has('email'))
+                            @error('email')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('email') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group">
@@ -28,11 +28,11 @@
 
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required{{ old('email') ? ' v-focus' : '' }}>
 
-                            @if ($errors->has('password'))
+                            @error('password')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('password') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group">
