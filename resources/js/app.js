@@ -29,5 +29,5 @@ Vue.directive('focus', require('./directives/FocusDirective.js'));
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });
