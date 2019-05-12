@@ -147,7 +147,8 @@ return [
 
     'attributes' => [
         'date' => 'data',
-        'name' => 'nome',
+        'first_name' => 'nome',
+        'last_name' => 'cognome',
     ],
 
 ];

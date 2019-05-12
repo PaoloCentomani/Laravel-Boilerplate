@@ -11,16 +11,30 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-group">
-                            <label for="name">{{ __('Full Name') }}</label>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="first_name">{{ __('First Name') }}</label>
 
-                            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required v-focus>
+                                <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required v-focus>
 
-                            @error('name')
-                                <div class="invalid-feedback" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                                @error('first_name')
+                                    <div class="invalid-feedback" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group col">
+                                <label for="last_name">{{ __('Last Name') }}</label>
+
+                                <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required>
+
+                                @error('last_name')
+                                    <div class="invalid-feedback" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="form-group">

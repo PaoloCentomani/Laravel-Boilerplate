@@ -30,7 +30,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbar-dropdown" href="#" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" role="button" v-pre>
                             <img class="float-left mr-2 rounded-circle gravatar" src="{{ $currentUser->gravatar }}" width="28" height="28">
-                            {{ $currentUser->name }}
+                            {{ $currentUser->fullName }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown">
