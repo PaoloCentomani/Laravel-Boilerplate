@@ -44,6 +44,9 @@ after('deploy:failed', 'deploy:unlock');
 // Migrate database before symlink new release.
 before('deploy:symlink', 'artisan:migrate');
 
+// [Optional] Restart the queue worker.
+// after('deploy:symlink', 'artisan:queue:restart');
+
 // Deploy production assets.
 task('deploy:assets', function () {
     runLocally('npm run prod');
