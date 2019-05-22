@@ -5,10 +5,11 @@
 /public/hot
 /public/mix-manifest.json
 /public/storage
-/public/vendor
+/public/vendor/telescope
 /storage/*.key
 /vendor
 .env
+.env.backup
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

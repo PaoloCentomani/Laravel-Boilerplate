@@ -8,25 +8,19 @@
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail Address') }}</label>
 
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required v-focus>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus v-focus>
 
-                            @if ($errors->has('email'))
+                            @error('email')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('email') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group mb-0">

@@ -15,18 +15,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Time
+    | PHP Locale
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the parameters related to time.
+    | The PHP locale determines the locale that will be used by PHP.
     |
     */
 
-    'time' => [
-
-        'locale' => 'it_IT.UTF-8',
-
-    ],
+    'php_locale' => 'it_IT.UTF-8',
 
     /*
     |--------------------------------------------------------------------------

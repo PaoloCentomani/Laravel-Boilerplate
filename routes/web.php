@@ -26,10 +26,10 @@ Route::post('signup', 'Auth\RegisterController@register');
 // Route::get('verification/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
 
 // Password Reset Routes...
-Route::get('password-reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password-reset/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password-reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password-reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+Route::get('password-reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::get('password-reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 
 // Page Routes...
 Route::get('/', 'HomeController@index')->name('home');

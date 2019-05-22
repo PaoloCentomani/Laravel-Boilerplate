@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,8 +30,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        setlocale(LC_TIME, config('boilerplate.time.locale'));
+        setlocale(LC_TIME, config('boilerplate.php_locale'));
 
-        \Carbon\Carbon::setLocale(config('app.locale'));
+        Carbon::setLocale(config('app.locale'));
     }
 }

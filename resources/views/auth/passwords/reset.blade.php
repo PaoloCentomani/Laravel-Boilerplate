@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('password.request') }}">
+                    <form method="POST" action="{{ route('password.update') }}">
                         @csrf
 
                         <input type="hidden" name="token" value="{{ $token }}">
@@ -16,37 +16,37 @@
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail Address') }}</label>
 
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email or old('email') }}" required{{ old('email') ? '' : ' v-focus' }}>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email"{{ ($email ?? old('email')) ? '' : ' autofocus v-focus' }}>
 
-                            @if ($errors->has('email'))
+                            @error('email')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('email') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="password">{{ __('Password') }}</label>
 
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required{{ old('email') ? ' v-focus' : '' }}>
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"{{ ($email ?? old('email')) ? ' autofocus v-focus' : '' }}>
 
-                            @if ($errors->has('password'))
+                            @error('password')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('password') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="password-confirm">{{ __('Confirm Password') }}</label>
 
-                            <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" required>
+                            <input id="password-confirm" type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
 
-                            @if ($errors->has('password_confirmation'))
+                            @error('password_confirmation')
                                 <div class="invalid-feedback" role="alert">
-                                    {{ $errors->first('password_confirmation') }}
+                                    {{ $message }}
                                 </div>
-                            @endif
+                            @enderror
                         </div>
 
                         <div class="form-group mb-0">
