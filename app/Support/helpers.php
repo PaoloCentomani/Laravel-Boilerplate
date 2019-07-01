@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 if (! function_exists('active')) {
@@ -12,7 +13,7 @@ if (! function_exists('active')) {
     function active($routes, $class = ' active')
     {
         $current = Route::currentRouteName();
-        $routes = array_wrap($routes);
+        $routes = Arr::wrap($routes);
 
         foreach ($routes as $route) {
             if ($route === $current) {
