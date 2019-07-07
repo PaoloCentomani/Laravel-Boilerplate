@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('Reset Password'))
+
 @section('content')
 <div class="container mx-auto">
     {{-- Card --}}

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('Login'))
+
 @section('content')
 <div class="container mx-auto">
     {{-- Card --}}

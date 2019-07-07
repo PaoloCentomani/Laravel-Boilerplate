@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('Verify Your Email Address'))
+
 @section('content')
 <div class="container mx-auto">
     <div class="card sm:max-w-sm mx-auto mt-8">
