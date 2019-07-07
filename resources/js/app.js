@@ -19,8 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+Vue.component('drop-down', require('./components/DropDown.vue').default);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.directive('focus', require('./directives/FocusDirective.js'));
+Vue.directive('focus', require('./directives/Focus.js'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,4 +31,8 @@ Vue.directive('focus', require('./directives/FocusDirective.js'));
 
 const app = new Vue({
     el: '#app',
+
+    data: {
+        isNavOpen: false,
+    }
 });

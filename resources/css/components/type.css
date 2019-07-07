@@ -1,0 +1,22 @@
+::selection {
+    @apply text-white bg-gray-800;
+    text-shadow: none;
+}
+
+.text-muted {
+    @apply text-gray-500;
+}
+
+/* Links */
+
+.card p a {
+    @apply text-blue-500 underline;
+
+    &:hover {
+        @apply text-blue-600
+    }
+
+    &:active {
+        @apply text-blue-700
+    }
+}

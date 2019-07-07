@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="container mx-auto mt-8">
+    <div class="md:flex">
+        <div class="card md:w-1/2 md:mr-2">
+            <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    You are logged in!
-                </div>
+            <div class="card-body">
+                You are logged in!
             </div>
         </div>
+
+        <example-component class="mt-6 md:w-1/2 md:mt-0 md:ml-2"></example-component>
     </div>
 </div>
 @endsection

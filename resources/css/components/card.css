@@ -1,0 +1,11 @@
+.card {
+    @apply overflow-hidden bg-white rounded shadow-lg;
+}
+
+.card-header {
+    @apply px-6 py-4 font-semibold text-xl text-gray-700 border-b border-gray-300 cursor-default;
+}
+
+.card-body {
+    @apply px-6 py-4;
+}

@@ -13,17 +13,12 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.webpackConfig({
-    resolve: {
-        alias: {
-            'jquery': 'jquery/dist/jquery.slim'
-        }
-    }
-});
+mix.js('resources/js/app.js', 'public/js').extract();
 
-mix.js('resources/js/app.js', 'public/js')
-   .extract()
-   .sass('resources/sass/app.scss', 'public/css')
-   .purgeCss({ whitelist: ['show'] });
+mix.postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('postcss-nested'),
+    require('tailwindcss')('tailwind.config.js'),
+]);
 
-mix.inProduction() ? mix.version() : mix.sourceMaps();
+mix.inProduction() ? mix.purgeCss().version() : mix.sourceMaps();

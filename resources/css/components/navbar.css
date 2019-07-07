@@ -1,0 +1,5 @@
+.nav-link {
+    &.active {
+        @apply text-white;
+    }
+}

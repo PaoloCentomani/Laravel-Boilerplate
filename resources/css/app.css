@@ -1,13 +1,13 @@
-@import "variables";
-
-@import "vendor/bootstrap";
 @import "vendor/vue";
 
-@import "components/badge";
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "components/alert";
 @import "components/buttons";
 @import "components/card";
 @import "components/forms";
 @import "components/navbar";
 @import "components/type";
 
-@import "login";
+@import "tailwindcss/utilities";

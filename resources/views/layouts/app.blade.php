@@ -23,13 +23,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('head')
 </head>
-<body class="{{ $classes }}">
-    <div id="app">
+<body class="bg-gray-100 {{ $classes }}">
+    <div id="app" class="min-h-screen flex flex-col">
         <header class="app-header">
             @include('shared.header')
         </header>
 
-        <main class="app-content">
+        <main class="app-content flex-1">
             @include('shared.flash')
             @yield('content')
         </main>
