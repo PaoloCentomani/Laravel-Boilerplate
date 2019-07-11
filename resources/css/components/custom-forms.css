@@ -1,0 +1,57 @@
+.custom-control {
+    @apply relative;
+    padding-left: 1.75rem;
+}
+
+.custom-control-input {
+    @apply absolute opacity-0;
+    z-index: -1;
+}
+
+.custom-control-label {
+    @apply relative mb-0 align-top;
+
+    &::before,
+    &::after {
+        @apply absolute w-5 h-5;
+        content: "";
+        top: 0.05rem;
+        left: -1.75rem; /* Same value, but negative, as "padding-left" of .custom-control... */
+    }
+
+    &::before {
+        @apply border border-gray-300 bg-gray-100 pointer-events-none;
+        transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &::after {
+        background: no-repeat 50% / 50%;
+    }
+}
+
+.custom-checkbox {
+    .custom-control-label::before {
+        @apply rounded;
+    }
+
+    .custom-control-input {
+        &:checked ~ .custom-control-label::before {
+            @apply bg-blue-600 border-blue-600;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        &:checked ~ .custom-control-label::after {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.479 100"%3E%3Cpath d="M93.875 1.426C88.581-1.573 81.874.313 78.893 5.639L36.185 73.385 16.471 59.843C11.146 56.862 4.435 59 1.435 64S.285 76.032 5.611 79.012c0 0 27.686 19.166 28.385 19.562 5.294 2.999 12.001 1.113 14.982-4.213l49.084-77.863c2.981-5.325 1.106-12.073-4.187-15.072z" fill="white"/%3E%3C/svg%3E');
+        }
+
+        &:focus:checked ~ .custom-control-label::before {
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                        inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(99, 179, 237, 0.25);
+        }
+
+        &:focus:not(:checked) ~ .custom-control-label::before {
+            @apply border-blue-300;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(99, 179, 237, 0.25);
+        }
+    }
+}
