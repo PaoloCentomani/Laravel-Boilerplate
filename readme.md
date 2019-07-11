@@ -1,26 +1,27 @@
 # Boilerplate
 
+<img src="https://i.ibb.co/SJLV8cM/Boilerplate.png" width="1280" alt="Boilerplate">
+
 ## Installation
 
-```bash
-git clone https://github.com/PaoloCentomani/dashboard-boilerplate.git
-cd dashboard-boilerplate && rm -rf .git
+```
+git clone https://github.com/PaoloCentomani/Laravel-Boilerplate.git
+cd Laravel-Boilerplate && rm -rf .git
 composer install
 npm install && npm run dev
 git init && git add . && git commit -m "Initial commit"
 ```
 
-## Configuration
-
-```bash
-cp .env.example .env
-php artisan key:generate
-vim .env
-```
-
 ### Preparing the database
 
-```bash
+```
 php artisan migrate
 php artisan db:seed
+```
+
+## Configuration
+
+```
+cp .env.example .env
+php artisan key:generate
 ```
