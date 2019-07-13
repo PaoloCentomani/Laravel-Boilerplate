@@ -3,11 +3,17 @@
     "short_name": "Boilerplate",
     "icons": [
         {
-            "src": "launcher-icon.png",
+            "src": "launcher-icon-192x192.png",
             "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "launcher-icon-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
+    "display": "standalone",
     "theme_color": "#000",
     "background_color": "#000",
     "start_url": "index.php?utm_source=launcher"
