@@ -42,3 +42,28 @@ if (! function_exists('flash')) {
         return $notifier->info($message);
     }
 }
+
+if (! function_exists('svg')) {
+    /**
+     * Render an SVG file.
+     *
+     * @param  string  $name
+     * @param  string  $class
+     * @param  string  $title
+     * @return string
+     */
+    function svg($name, $class, $title = '')
+    {
+        $output = file_get_contents(resource_path("svg/{$name}.svg"));
+
+        if ($class) {
+            $output = str_replace('<svg', "<svg class=\"{$class}\"", $output);
+        }
+
+        if ($title) {
+            $output = str_replace('</svg>', "<title>{$title}</title></svg>", $output);
+        }
+
+        return $output;
+    }
+}

@@ -25,9 +25,7 @@ class BladeServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('svg', function ($expression) {
-            $expression = substr($expression, 1, -1);
-
-            return "<?php include resource_path('svg/{$expression}.svg'); ?>";
+            return  "<?php echo svg($expression); ?>";
         });
     }
 }
