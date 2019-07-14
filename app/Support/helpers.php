@@ -8,18 +8,16 @@ if (! function_exists('active')) {
      * Determine if one of the given route names is active.
      *
      * @param  mixed  $routes
-     * @return void
+     * @param  string  $class
+     * @return string|void
      */
-    function active($routes, $class = ' active')
+    function active($routes, $class = 'active')
     {
         $current = Route::currentRouteName();
         $routes = Arr::wrap($routes);
 
-        foreach ($routes as $route) {
-            if ($route === $current) {
-                echo $class;
-                break;
-            }
+        if (in_array($current, $routes)) {
+            return " {$class}";
         }
     }
 }
