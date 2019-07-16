@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <example-component class="mt-6 md:w-1/2 md:mt-0 md:ml-2"></example-component>
+        <v-example class="mt-6 md:w-1/2 md:mt-0 md:ml-2"></v-example>
     </div>
 </div>
 @endsection

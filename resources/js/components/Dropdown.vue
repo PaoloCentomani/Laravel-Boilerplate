@@ -1,8 +1,8 @@
 <template>
     <div class="dropdown relative cursor-pointer">
-        <div class="dropdown-toggle flex items-center"
+        <div class="dropdown-toggle flex items-center" aria-haspopup="true" role="button"
              @click.prevent="isOpen = ! isOpen"
-             aria-haspopup="true" :id="label" :aria-expanded="isOpen" role="button"
+             :aria-expanded="isOpen.toString()" :id="id"
         >
             <slot name="toggle"></slot>
         </div>
@@ -10,7 +10,7 @@
         <transition name="slide-down">
             <div class="dropdown-menu z-10 absolute mt-2 py-2 text-left text-black bg-white rounded shadow-lg cursor-default"
                 v-show="isOpen"
-                :aria-labelledby="label" :class="align === 'right' ? 'sm:right-0' : ''"
+                :aria-labelledby="id" :class="align === 'right' ? 'sm:right-0' : ''"
             >
                 <slot></slot>
             </div>
@@ -31,7 +31,7 @@
                 type: String,
                 default: 'left'
             },
-            label: {
+            id: {
                 type: String,
                 required: true
             }

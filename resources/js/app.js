@@ -19,8 +19,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('drop-down', require('./components/DropDown.vue').default);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('v-dropdown', require('./components/Dropdown.vue').default);
+Vue.component('v-example', require('./components/Example.vue').default);
 Vue.directive('focus', require('./directives/Focus.js'));
 
 /**

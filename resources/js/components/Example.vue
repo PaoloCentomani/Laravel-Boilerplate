@@ -10,8 +10,26 @@
 
 <script>
     export default {
+        data() {
+            return {
+                //
+            };
+        },
+
+        props: {
+            //
+        },
+
         mounted() {
-            console.log('Component mounted.')
+            //
+        },
+
+        watch: {
+            //
+        },
+
+        methods: {
+            //
         }
     }
 </script>

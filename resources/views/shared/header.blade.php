@@ -27,7 +27,7 @@
                         <a class="nav-link text-gray-500 hover:text-white{{ active('register') }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                 @else
-                    <drop-down label="navbar-dropdown" align="right" class="nav-item block sm:inline-block mt-4 sm:mt-0">
+                    <v-dropdown label="navbar-dropdown" align="right" class="nav-item block sm:inline-block mt-4 sm:mt-0">
                         <template v-slot:toggle>
                             <img class="float-left mr-2 rounded-circle gravatar" src="{{ $currentUser->gravatar }}" width="28" height="28">
                             {{ $currentUser->fullName }}
@@ -45,7 +45,7 @@
                                 {{ __('Logout') }}
                             </a>
                         </div>
-                    </drop-down>
+                    </v-dropdown>
 
                     <form method="POST" action="{{ route('logout') }}" class="hidden" id="logout-form">
                         @csrf
