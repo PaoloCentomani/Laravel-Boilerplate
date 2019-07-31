@@ -1,24 +1,17 @@
 <?php
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 if (! function_exists('active')) {
     /**
      * Determine if one of the given route names is active.
      *
      * @param  mixed  $routes
-     * @param  string  $class
-     * @return string|void
+     * @return string
      */
-    function active($routes, $class = 'active')
+    function active($routes)
     {
-        $current = Route::currentRouteName();
-        $routes = Arr::wrap($routes);
-
-        if (in_array($current, $routes)) {
-            return " {$class}";
-        }
+        return Request::routeIs($routes) ? ' active' : '';
     }
 }
 
