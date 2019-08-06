@@ -3,13 +3,14 @@
 namespace App;
 
 use App\Support\Gravatar\HasGravatar;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasGravatar, Notifiable;
+    use HasGravatar, HasRoles, Notifiable;
 
     /**
      * The table associated with the model.

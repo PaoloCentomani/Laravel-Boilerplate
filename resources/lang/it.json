@@ -1,4 +1,5 @@
 {
+    "Administrator": "Amministratore",
     "All rights reserved.": "Tutti i diritti riservati.",
     "Already have an account?": "Hai già un account?",
     "A fresh verification link has been sent to your email address.": "Un nuovo link di verifica è stato inviato al tuo indirizzo e-mail.",
@@ -34,6 +35,8 @@
     "Toggle Navigation": "Mostra o nascondi la navigazione",
     "Too Many Requests": "Troppe richieste",
     "Unauthorized": "Non autorizzato",
+    "User does not have the right permissions.": "Permessi non sufficienti.",
+    "User does not have the right roles.": "Ruolo non sufficiente.",
     "Verify Your Email Address": "Verifica il tuo indirizzo e-mail",
     "Whoops!": "Ops!",
     "You are receiving this email because we received a password reset request for your account.": "Abbiamo ricevuto una richiesta di reimpostazione della password per il tuo account."

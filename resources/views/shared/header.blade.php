@@ -35,9 +35,15 @@
                         </template>
 
                         <div v-cloak>
+                            @can('view backend')
+                            <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                {{ __('Administrator') }}
+                            </a>
+                            @else
                             <span class="dropdown-item text-muted">
                                 {{ config('app.name') }}
                             </span>
+                            @endcan
 
                             <div class="dropdown-divider"></div>
 

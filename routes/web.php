@@ -33,3 +33,8 @@ Route::get('password-reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 
 // Page Routes...
 Route::get('/', 'HomeController@index')->name('home');
+
+// Administrator Routes...
+Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'permission:view backend'])->group(function () {
+    Route::get('/', 'HomeController@index')->name('home');
+});
