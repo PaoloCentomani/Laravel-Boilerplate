@@ -1,5 +1,10 @@
 .form-group {
     @apply flex flex-col mb-3;
+
+     &.required label:after {
+        content: "•";
+        @apply ml-1 text-blue-500;
+    }
 }
 
 .form-control {

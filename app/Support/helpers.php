@@ -34,16 +34,34 @@ if (! function_exists('flash')) {
     }
 }
 
+if (! function_exists('optional_field')) {
+    /**
+     * Render an optional field that might be null.
+     *
+     * @param  string  $field
+     * @param  string|null  $output
+     * @return string
+     */
+    function optional_field($field, $output = null)
+    {
+        if (! $field) {
+            return '―';
+        }
+
+        return $output ?: $field;
+    }
+}
+
 if (! function_exists('svg')) {
     /**
      * Render an SVG file.
      *
      * @param  string  $name
-     * @param  string  $class
-     * @param  string  $title
+     * @param  string|null  $class
+     * @param  string|null  $title
      * @return string
      */
-    function svg($name, $class, $title = '')
+    function svg($name, $class = '', $title = '')
     {
         $output = file_get_contents(resource_path("svg/{$name}.svg"));
 

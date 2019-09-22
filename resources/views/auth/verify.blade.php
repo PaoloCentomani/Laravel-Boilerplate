@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Verify Your Email Address'))
+@section('title', __('Verify Your E-Mail Address'))
 
 @section('content')
 <div class="container mx-auto">

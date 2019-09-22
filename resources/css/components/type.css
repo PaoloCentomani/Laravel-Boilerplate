@@ -3,6 +3,10 @@
     text-shadow: none;
 }
 
+h1 {
+    @apply my-2 font-semibold text-2xl uppercase;
+}
+
 .text-muted {
     @apply text-gray-500;
 }

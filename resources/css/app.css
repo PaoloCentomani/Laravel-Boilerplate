@@ -9,6 +9,8 @@
 @import "components/custom-forms";
 @import "components/forms";
 @import "components/navbar";
+@import "components/pagination";
+@import "components/tables";
 @import "components/type";
 
 @import "tailwindcss/utilities";

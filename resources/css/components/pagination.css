@@ -1,0 +1,31 @@
+/* purgecss start ignore */
+ul.pagination {
+    @apply flex justify-center my-3;
+
+    li.page-item {
+        .page-link {
+            @apply block -ml-px px-3 py-1 border border-gray-300 bg-white;
+        }
+
+        &:first-child .page-link {
+            @apply ml-0 rounded-l;
+        }
+
+        &:last-child .page-link {
+            @apply rounded-r;
+        }
+
+        &.active {
+            @apply z-10;
+
+            .page-link {
+                @apply text-white bg-blue-500 border-blue-500;
+            }
+        }
+
+        &.disabled {
+            @apply cursor-not-allowed text-gray-300;
+        }
+    }
+}
+/* purgecss end ignore */

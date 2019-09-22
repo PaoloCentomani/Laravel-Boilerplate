@@ -51,7 +51,7 @@
 
         methods: {
             closeIfClickedOutside(event) {
-                if (! event.target.closest('.dropdown')) {
+                if (! event.target.closest(`#${this.id}`)) {
                     this.isOpen = false;
                 }
             },

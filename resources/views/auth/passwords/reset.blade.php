@@ -14,6 +14,7 @@
 
                 <input type="hidden" name="token" value="{{ $token }}">
 
+                {{-- E-Mail Address --}}
                 <div class="form-group">
                     <label for="email">{{ __('E-Mail Address') }}</label>
 
@@ -26,6 +27,7 @@
                     @enderror
                 </div>
 
+                {{-- Password --}}
                 <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
 
@@ -38,6 +40,7 @@
                     @enderror
                 </div>
 
+                {{-- Confirm Password --}}
                 <div class="form-group">
                     <label for="password-confirm">{{ __('Confirm Password') }}</label>
 
@@ -50,6 +53,7 @@
                     @enderror
                 </div>
 
+                {{-- Buttons --}}
                 <div class="form-group mt-4 mb-1">
                     <button type="submit" class="btn btn-primary">
                         {{ __('Reset Password') }}

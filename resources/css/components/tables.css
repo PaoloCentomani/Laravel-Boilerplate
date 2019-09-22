@@ -1,0 +1,27 @@
+table {
+    @apply w-full border-collapse;
+}
+
+th, td {
+    @apply p-2 border border-gray-300;
+}
+
+
+th {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    @apply text-left;
+}
+
+td {
+    @apply bg-white;
+}
+
+tr {
+    @apply cursor-default;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}

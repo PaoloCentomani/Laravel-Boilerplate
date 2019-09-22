@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -13,6 +14,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $users = User::paginate(5);
+
+        return view('admin.home', [
+            'users' => $users,
+        ]);
     }
 }

@@ -12,6 +12,7 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
+                {{-- E-Mail Address --}}
                 <div class="form-group">
                     <label for="email">{{ __('E-Mail Address') }}</label>
 
@@ -24,6 +25,7 @@
                     @enderror
                 </div>
 
+                {{-- Password --}}
                 <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
 
@@ -36,6 +38,7 @@
                     @enderror
                 </div>
 
+                {{-- Remember Me --}}
                 <div class="form-group">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="remember-me" name="remember"{{ old('remember') ? ' checked' : '' }}>

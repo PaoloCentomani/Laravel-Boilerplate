@@ -23,7 +23,7 @@ Route::post('signup', 'Auth\RegisterController@register');
 // E-Mail Verification Routes...
 // Route::get('verification/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 // Route::get('verification', 'Auth\VerificationController@show')->name('verification.notice');
-// Route::get('verification/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
+// Route::get('verification/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 
 // Password Reset Routes...
 Route::post('password-reset/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -32,7 +32,9 @@ Route::get('password-reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::get('password-reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 
 // Page Routes...
-Route::get('/', 'HomeController@index')->name('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/', 'HomeController@index')->name('home');
+});
 
 // Administrator Routes...
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'permission:view backend'])->group(function () {
