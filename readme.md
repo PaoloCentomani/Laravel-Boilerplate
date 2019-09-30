@@ -2,6 +2,13 @@
 
 <img src="https://i.ibb.co/SJLV8cM/Boilerplate.png" width="1280" alt="Boilerplate">
 
+## Features
+
+* [Tailwind CSS](https://tailwindcss.com/) UI with [Bootstrap](https://getbootstrap.com/)-like classes
+* Ready-made [Vue.js](https://vuejs.org/) components: tabs, dropdowns
+* Roles and permissions using [Laravel Permission](https://docs.spatie.be/laravel-permission/v3/introduction/)
+* [Deployer](https://deployer.org/) support
+
 ## Installation
 
 ```
