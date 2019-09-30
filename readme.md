@@ -6,6 +6,7 @@
 
 * [Tailwind CSS](https://tailwindcss.com/) UI with [Bootstrap](https://getbootstrap.com/)-like classes
 * Ready-made [Vue.js](https://vuejs.org/) components: tabs, dropdowns
+* Lightweight, well-mantained plain JavaScript plugins: [flatpickr](https://flatpickr.js.org/), [SimpleBar](http://grsmto.github.io/simplebar/)
 * Roles and permissions using [Laravel Permission](https://docs.spatie.be/laravel-permission/v3/introduction/)
 * [Deployer](https://deployer.org/) support
 

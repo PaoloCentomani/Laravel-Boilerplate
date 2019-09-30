@@ -42,6 +42,25 @@ if (token) {
 // });
 
 /**
+ * Include SimpleBar, a lightweight custom scrollbar.
+ *
+ * @link http://grsmto.github.io/simplebar/
+ */
+
+import 'simplebar';
+
+/**
+ * Include flatpickr, a lightweight and powerful datetime picker.
+ *
+ * @link https://flatpickr.js.org
+ */
+
+import flatpickr from 'flatpickr';
+
+flatpickr.localize(require('flatpickr/dist/l10n/it.js').default.it);
+
+/**
  * Prevent opening links in Safari when in Web Clip mode.
  */
+
 require('./includes/ios-webclip-fix');

@@ -1,0 +1,5 @@
+@import "simplebar/dist/simplebar";
+
+.simplebar-scrollbar:before {
+    @apply .bg-gray-500;
+}

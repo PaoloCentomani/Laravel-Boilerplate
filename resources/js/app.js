@@ -36,5 +36,15 @@ const app = new Vue({
 
     data: {
         isNavOpen: false,
+    },
+
+    mounted() {
+        flatpickr('.datetimepicker', {
+            altInput: true,
+            altFormat: "j F Y H:i",
+            dateFormat: 'Y-m-d H:i',
+            enableTime: true,
+            time_24hr: true,
+        });
     }
 });
