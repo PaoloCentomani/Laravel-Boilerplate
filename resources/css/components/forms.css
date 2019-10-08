@@ -24,6 +24,13 @@ label {
     @apply mb-1 inline-block font-semibold text-sm text-gray-600;
 }
 
+/* Required */
+label.required:after,
+.form-group.required label:after {
+    content: "●";
+    @apply ml-1 text-yellow-500;
+}
+
 @screen md {
     .form-row {
         @apply flex flex-wrap;

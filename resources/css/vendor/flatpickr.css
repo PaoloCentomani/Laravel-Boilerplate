@@ -1,1 +1,11 @@
+/* purgecss start ignore */
 @import 'flatpickr/dist/flatpickr';
+
+.flatpickr-day.selected {
+    @apply border-blue-600 bg-blue-500;
+
+    &:hover {
+        @apply border-blue-600 bg-blue-600;
+    }
+}
+/* purgecss end ignore */

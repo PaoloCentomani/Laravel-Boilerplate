@@ -61,9 +61,11 @@
             {{ __('Register') }}
         </a>
 
+        @if (Route::has('password.request'))
         <a href="{{ route('password.request') }}" class="text-sm text-gray-500 hover:text-gray-600">
             {{ __('Forgot Password?') }}
         </a>
+        @endif
     </p>
 </div>
 @endsection
