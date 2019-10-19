@@ -87,11 +87,18 @@
     </section>
 
     {{-- Custom Scrollbar --}}
-    <section class="mt-8">
-        <h1>Custom Scrollbar</h1>
-        <div class="h-24" data-simplebar>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus. Justo donec enim diam vulputate ut pharetra sit amet. Elementum tempus egestas sed sed risus pretium quam vulputate. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui id ornare arcu odio. Tristique et egestas quis ipsum suspendisse. Diam maecenas sed enim ut sem viverra aliquet. Tristique et egestas quis ipsum suspendisse ultrices. Id aliquet lectus proin nibh nisl condimentum id venenatis a.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada nunc vel risus commodo viverra. Est ante in nibh mauris. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Dictum varius duis at consectetur. Et molestie ac feugiat sed lectus vestibulum. Netus et malesuada fames ac. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Sit amet purus gravida quis blandit turpis cursus in hac. Mus mauris vitae ultricies leo integer malesuada.</p>
+    <section class="md:flex mt-8">
+        <div class="md:w-1/2 md:mr-2">
+            @widget('ExampleWidget')
+        </div>
+
+        <div class="md:w-1/2 md:ml-2">
+            <h1>Custom Scrollbar</h1>
+
+            <div class="h-48" data-simplebar>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus. Justo donec enim diam vulputate ut pharetra sit amet. Elementum tempus egestas sed sed risus pretium quam vulputate. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Velit egestas dui id ornare arcu odio. Tristique et egestas quis ipsum suspendisse. Diam maecenas sed enim ut sem viverra aliquet. Tristique et egestas quis ipsum suspendisse ultrices. Id aliquet lectus proin nibh nisl condimentum id venenatis a.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada nunc vel risus commodo viverra. Est ante in nibh mauris. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Dictum varius duis at consectetur. Et molestie ac feugiat sed lectus vestibulum. Netus et malesuada fames ac. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Sit amet purus gravida quis blandit turpis cursus in hac. Mus mauris vitae ultricies leo integer malesuada.</p>
+            </div>
         </div>
     </section>
 </div>
