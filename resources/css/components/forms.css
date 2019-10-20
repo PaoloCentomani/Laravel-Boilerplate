@@ -1,10 +1,5 @@
 .form-group {
     @apply flex flex-col mb-3;
-
-     &.required label:after {
-        content: "•";
-        @apply ml-1 text-blue-500;
-    }
 }
 
 .form-control {
@@ -27,8 +22,8 @@ label {
 /* Required */
 label.required:after,
 .form-group.required label:after {
-    content: "●";
-    @apply ml-1 text-yellow-500;
+    content: "✻";
+    @apply ml-1 text-blue-500;
 }
 
 @screen md {
