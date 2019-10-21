@@ -1,6 +1,6 @@
 # Boilerplate
 
-<img src="https://i.ibb.co/SJLV8cM/Boilerplate.png" width="1280" alt="Boilerplate">
+<img src="https://i.ibb.co/V3ZFJtj/Boilerplate.png" width="1280" alt="Boilerplate">
 
 ## Features
 
