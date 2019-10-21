@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mx-auto">
     {{-- Card --}}
-    <div class="card sm:max-w-sm mx-auto mt-8">
+    <div class="card sm:max-w-sm mt-8 mx-auto">
         <div class="card-header">{{ __('Confirm Password') }}</div>
 
         <div class="card-body">
@@ -39,7 +39,7 @@
     </div>
 
     {{-- Links --}}
-    <p class="mt-6 text-sm text-center">
+    <p class="mt-8 text-sm text-center">
         @if (Route::has('password.request'))
         <a href="{{ route('password.request') }}" class="text-sm text-gray-500 hover:text-gray-600">
             {{ __('Forgot Password?') }}

@@ -23,12 +23,14 @@
     @yield('head')
 </head>
 <body class="font-sans bg-gray-100 {{ $classes }}">
-    <div id="app" class="min-h-screen flex flex-col">
+    <div id="app" class="flex flex-col min-h-screen">
+        @section('header')
         <header class="app-header">
             @include('shared.header')
         </header>
+        @show
 
-        <main class="app-content flex-1">
+        <main class="app-content flex flex-col flex-auto">
             @include('shared.flash')
             @yield('content')
         </main>
