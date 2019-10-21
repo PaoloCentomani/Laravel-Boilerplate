@@ -17,5 +17,6 @@ return [
     'sent' => 'Ti abbiamo inviato le istruzioni per reimpostare la password!',
     'token' => 'Questo token per la reimpostazione della password non è valido.',
     'user' => 'Non esiste un utente associato a questo indirizzo e-mail.',
+    'throttled' => 'Attendi qualche momento prima di riprovare.',
 
 ];

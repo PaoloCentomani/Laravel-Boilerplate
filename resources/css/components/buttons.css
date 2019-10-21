@@ -1,5 +1,5 @@
 .btn {
-    @apply px-3 py-3 rounded-sm appearance-none border-0 font-semibold bg-blue-600 text-white border border-blue-600 shadow-glare;
+    @apply px-3 py-3 font-semibold text-white bg-blue-600 border border-blue-600 rounded-sm appearance-none shadow-glare;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:hover {

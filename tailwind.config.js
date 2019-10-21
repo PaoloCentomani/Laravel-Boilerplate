@@ -1,5 +1,10 @@
 module.exports = {
   theme: {
+    // colors: {
+    //   black: '#000',
+    //   transparent: 'transparent',
+    //   white: '#fff'
+    // },
     container: {
       padding: '1rem'
     },

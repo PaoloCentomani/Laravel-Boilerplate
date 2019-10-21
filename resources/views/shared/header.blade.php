@@ -1,4 +1,4 @@
-<nav class="py-4 text-white bg-gray-800">
+<nav class="navbar py-4 text-white bg-gray-800">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
         {{-- Branding Image --}}
         <a class="navbar-brand flex items-center text-white" href="{{ route('home') }}" rel="home">

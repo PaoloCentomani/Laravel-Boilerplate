@@ -40,11 +40,9 @@
 
     {{-- Links --}}
     <p class="mt-8 text-sm text-center">
-        @if (Route::has('password.request'))
-        <a href="{{ route('password.request') }}" class="text-sm text-gray-500 hover:text-gray-600">
-            {{ __('Forgot Password?') }}
+        <a href="javascript:history.back()" class="text-sm text-gray-500 hover:text-gray-600">
+            ← {{ __('Back') }}
         </a>
-        @endif
     </p>
 </div>
 @endsection

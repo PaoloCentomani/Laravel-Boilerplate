@@ -21,4 +21,6 @@ mix.postCss('resources/css/app.css', 'public/css', [
     require('tailwindcss')('tailwind.config.js'),
 ]);
 
+// mix.copyDirectory('resources/img', 'public/img');
+
 mix.inProduction() ? mix.purgeCss().version() : mix.sourceMaps();

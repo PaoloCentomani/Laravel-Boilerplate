@@ -12,7 +12,7 @@
 }
 
 .invalid-feedback {
-    @apply my-2 p-3 leading-tight text-sm text-red-600 bg-red-100 rounded-lg;
+    @apply my-2 p-3 leading-tight text-sm text-red-600 bg-red-100 rounded-lg cursor-default;
 }
 
 label {
