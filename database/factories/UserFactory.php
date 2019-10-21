@@ -34,6 +34,11 @@ $factory->define(User::class, function (Faker $faker) {
 |--------------------------------------------------------------------------
 */
 
+$factory->state(User::class, 'super administrator', [])
+        ->afterCreatingState(User::class, 'super administrator', function ($user) {
+            $user->assignRole('super administrator');
+        });
+
 $factory->state(User::class, 'administrator', [])
         ->afterCreatingState(User::class, 'administrator', function ($user) {
             $user->assignRole('administrator');

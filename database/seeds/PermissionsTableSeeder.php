@@ -42,8 +42,5 @@ class PermissionsTableSeeder extends Seeder
             Role::create(['name' => $role])
                 ->givePermissionTo($permissions);
         }
-
-        User::first()->assignRole('super administrator');
-        User::all()->each->assignRole('user');
     }
 }
