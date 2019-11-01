@@ -5,7 +5,7 @@
 @section('content-inner')
 {{-- Card --}}
 <div class="card sm:max-w-sm mx-auto mt-8">
-    <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+    <div class="card-header">{{ __('Verify Your E-Mail Address') }}</div>
 
     <div class="card-body">
         @if (session('resent'))

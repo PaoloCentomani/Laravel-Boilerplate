@@ -38,9 +38,14 @@ Route::get('password-reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 // Page Routes...
 Route::middleware('auth')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
+
+    Route::middleware('password.confirm')->group(function () {
+        Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+        Route::put('profile', 'ProfileController@update')->name('profile.update');
+    });
 });
 
 // Administrator Routes...
-Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'password.confirm', 'permission:view backend'])->group(function () {
+Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'permission:view backend'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 });
