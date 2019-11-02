@@ -1,7 +1,5 @@
-/* purgecss start ignore */
 @import "simplebar/dist/simplebar";
 
 .simplebar-scrollbar:before {
     @apply .bg-gray-500;
 }
-/* purgecss end ignore */

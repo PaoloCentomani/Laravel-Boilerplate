@@ -1,7 +1,3 @@
-@import "vendor/flatpickr";
-@import "vendor/simplebar";
-@import "vendor/vue";
-
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
