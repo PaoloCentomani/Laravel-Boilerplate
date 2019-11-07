@@ -2,13 +2,13 @@
     <div class="container mx-auto flex flex-wrap items-center justify-between">
         {{-- Branding Image --}}
         <a class="navbar-brand flex items-center text-white" href="{{ route('home') }}" rel="home">
-            @svg('logo', 'h-8', config('app.name'))
+            @svg('logo', config('app.name'), 'h-8')
         </a>
 
         {{-- Collapsed Hamburger --}}
         <div class="navbar-toggler block sm:hidden">
             <button class="flex items-center -mr-2 p-2 text-gray-400 hover:text-gray-300 focus:text-gray-200 focus:bg-gray-700 focus:outline-none rounded" aria-controls="navbar-supported-content" aria-label="{{ __('Toggle Navigation') }}" :aria-expanded="isNavOpen ? 'true' : 'false'" @click="isNavOpen = ! isNavOpen">
-                @svg('menu', 'h-4 fill-current', __('Toggle Navigation'))
+                @svg('menu', __('Toggle Navigation'), 'h-4 fill-current')
             </button>
         </div>
 
@@ -31,7 +31,7 @@
                         <template v-slot:toggle>
                             <img class="float-left mr-2 rounded-circle gravatar" src="{{ $currentUser->gravatar }}" width="28" height="28">
                             {{ $currentUser->fullName }}
-                            @svg('dropdown', 'h-3 ml-2 fill-current', __('Toggle Menu'))
+                            @svg('dropdown', __('Toggle Menu'), 'h-3 ml-2 fill-current')
                         </template>
 
                         <div v-cloak>

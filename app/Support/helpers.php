@@ -57,20 +57,20 @@ if (! function_exists('svg')) {
      * Render an SVG file.
      *
      * @param  string  $name
-     * @param  string|null  $class
      * @param  string|null  $title
+     * @param  string|null  $class
      * @return string
      */
-    function svg($name, $class = '', $title = '')
+    function svg($name, $title = '', $class = '')
     {
         $output = file_get_contents(resource_path("svg/{$name}.svg"));
 
-        if ($class) {
-            $output = str_replace('<svg', "<svg class=\"{$class}\"", $output);
-        }
-
         if ($title) {
             $output = str_replace('</svg>', "<title>{$title}</title></svg>", $output);
+        }
+
+        if ($class) {
+            $output = str_replace('<svg', "<svg class=\"{$class}\"", $output);
         }
 
         return $output;
