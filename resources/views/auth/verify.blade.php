@@ -9,9 +9,7 @@
 
     <div class="card-body">
         @if (session('resent'))
-            <div class="alert alert-success mb-3" role="alert">
-                {{ __('A fresh verification link has been sent to your email address.') }}
-            </div>
+        <v-flash>{{ __('A fresh verification link has been sent to your email address.') }}</v-flash>
         @endif
 
         <p class="mb-3">

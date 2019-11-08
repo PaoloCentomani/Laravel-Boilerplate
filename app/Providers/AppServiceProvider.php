@@ -15,10 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('flash', function () {
-            return $this->app->make(\App\Support\Flash\Notifier::class);
-        });
-
         if ($this->app->isLocal()) {
             $this->app->register(TelescopeServiceProvider::class);
         }
@@ -36,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale(config('app.locale'));
 
         Flash::levels([
-            'error' => 'alert-error',
+            'error' => 'alert-danger',
             'success' => 'alert-success',
             'warning' => 'alert-warning',
         ]);
