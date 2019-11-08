@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
+use Spatie\Flash\Flash;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,5 +34,11 @@ class AppServiceProvider extends ServiceProvider
         setlocale(LC_TIME, config('boilerplate.php_locale'));
 
         Carbon::setLocale(config('app.locale'));
+
+        Flash::levels([
+            'error' => 'alert-error',
+            'success' => 'alert-success',
+            'warning' => 'alert-warning',
+        ]);
     }
 }

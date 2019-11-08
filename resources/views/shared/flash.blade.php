@@ -1,13 +1,7 @@
-@if ($messages = session()->pull('flash_notification'))
-    @foreach ($messages as $message)
-        <div class="container mx-auto mt-3">
-            <div class="alert alert-{{ $message->level }}{{ $message->important ? ' alert-important' : '' }}" role="alert">
-                @if ($message->title)
-                    <h4 class="alert-heading">{!! $message->title !!}</h4>
-                @endif
-
-                {!! $message->message !!}
-            </div>
+@if ($message = flash()->message)
+    <div class="container mx-auto mb-8">
+        <div class="alert {{ flash()->class }}" role="alert">
+            {!! $message !!}
         </div>
-    @endforeach
+    </div>
 @endif

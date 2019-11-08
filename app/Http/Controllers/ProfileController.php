@@ -47,6 +47,6 @@ class ProfileController extends Controller
 
         flash()->success(__('Your profile has been updated!'));
 
-        return back();
+        return redirect()->route('home');
     }
 }
