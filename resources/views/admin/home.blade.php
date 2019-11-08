@@ -3,7 +3,7 @@
 @section('title', __('Home'))
 
 @section('content')
-<div class="container mx-auto mt-8">
+<div class="container mx-auto">
     <section class="md:flex">
         <div class="card md:w-1/2 md:mr-2">
             <div class="card-header">Dashboard</div>

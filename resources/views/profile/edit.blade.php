@@ -3,7 +3,7 @@
 @section('title', __('Profile'))
 
 @section('content')
-<div class="container mx-auto mt-8">
+<div class="container mx-auto">
     <div class="md:flex md:justify-center">
         <div class="card md:w-1/2">
             <div class="card-header">

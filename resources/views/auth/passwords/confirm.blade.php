@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mx-auto">
     {{-- Card --}}
-    <div class="card sm:max-w-sm mt-8 mx-auto">
+    <div class="card sm:max-w-sm mx-auto">
         <div class="card-header">{{ __('Confirm Password') }}</div>
 
         <div class="card-body">

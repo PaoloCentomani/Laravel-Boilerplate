@@ -4,7 +4,7 @@
 
 @section('content-inner')
 {{-- Card --}}
-<div class="card sm:max-w-sm mx-auto mt-8">
+<div class="card sm:max-w-sm mx-auto">
     <div class="card-header">{{ __('Register') }}</div>
 
     <div class="card-body">
