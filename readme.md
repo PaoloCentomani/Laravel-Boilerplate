@@ -24,8 +24,7 @@ git init && git add . && git commit -m "Initial commit"
 ### Preparing the database
 
 ```
-php artisan migrate
-php artisan db:seed
+php artisan migrate --seed
 ```
 
 ## Configuration
@@ -33,4 +32,5 @@ php artisan db:seed
 ```
 cp .env.example .env
 php artisan key:generate
+php artisan storage:link
 ```
