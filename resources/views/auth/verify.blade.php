@@ -5,13 +5,15 @@
 @section('content-inner')
 {{-- Card --}}
 <div class="card sm:max-w-sm mx-auto">
-    <div class="card-header">{{ __('Verify Your E-Mail Address') }}</div>
+    @if (session('resent'))
+    <v-flash>{{ __('A fresh verification link has been sent to your email address.') }}</v-flash>
+    @endif
+
+    <div class="card-header">
+        {{ __('Verify Your E-Mail Address') }}
+    </div>
 
     <div class="card-body">
-        @if (session('resent'))
-        <v-flash>{{ __('A fresh verification link has been sent to your email address.') }}</v-flash>
-        @endif
-
         <p class="mb-3">
             {{ __('Before proceeding, please check your email for a verification link.') }}
         </p>

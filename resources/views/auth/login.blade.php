@@ -3,14 +3,16 @@
 @section('title', __('Login'))
 
 @section('content-inner')
-{{-- Card --}}
-<div class="card sm:max-w-sm mx-auto">
-    <div class="card-header">{{ __('Login') }}</div>
+<form method="POST" action="{{ route('login') }}">
+    @csrf
 
-    <div class="card-body">
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    {{-- Card --}}
+    <div class="card mx-auto sm:max-w-sm">
+        <div class="card-header">
+            {{ __('Login') }}
+        </div>
 
+        <div class="card-body">
             {{-- E-Mail Address --}}
             <div class="form-group">
                 <label for="email">{{ __('E-Mail Address') }}</label>
@@ -44,24 +46,28 @@
                     <label class="custom-control-label" for="remember-me">{{ __('Remember Me') }}</label>
                 </div>
             </div>
+        </div>
 
-            <div class="form-group mt-4 mb-1">
-                <button type="submit" class="btn btn-primary">
+        <div class="card-footer">
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary btn-block">
                     {{ __('Login') }}
                 </button>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</form>
 
 {{-- Links --}}
-<p class="mt-8 text-sm text-center">
-    <a href="{{ route('register') }}" class="mr-5 text-gray-500 hover:text-gray-600">
+<p class="mt-8 mb-2 text-sm text-center">
+    @if (Route::has('register'))
+    <a href="{{ route('register') }}" class="mr-5 text-gray-500 focus:text-gray-600">
         {{ __('Register') }}
     </a>
+    @endif
 
     @if (Route::has('password.request'))
-    <a href="{{ route('password.request') }}" class="text-sm text-gray-500 hover:text-gray-600">
+    <a href="{{ route('password.request') }}" class="text-sm text-gray-500 focus:text-gray-600">
         {{ __('Forgot Password?') }}
     </a>
     @endif

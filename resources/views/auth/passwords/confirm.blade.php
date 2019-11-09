@@ -4,17 +4,19 @@
 
 @section('content')
 <div class="container mx-auto">
-    {{-- Card --}}
-    <div class="card sm:max-w-sm mx-auto">
-        <div class="card-header">{{ __('Confirm Password') }}</div>
+    <form method="POST" action="{{ route('password.confirm') }}">
+        @csrf
 
-        <div class="card-body">
-            <p class="mb-3">
-                {{ __('Please confirm your password before continuing.') }}
-            </p>
+        {{-- Card --}}
+        <div class="card sm:max-w-sm mx-auto">
+            <div class="card-header">
+                {{ __('Confirm Password') }}
+            </div>
 
-            <form method="POST" action="{{ route('password.confirm') }}">
-                @csrf
+            <div class="card-body">
+                <p class="mb-3">
+                    {{ __('Please confirm your password before continuing.') }}
+                </p>
 
                 {{-- Password --}}
                 <div class="form-group">
@@ -28,19 +30,21 @@
                         </div>
                     @enderror
                 </div>
+            </div>
 
-                <div class="form-group mt-4 mb-1">
-                    <button type="submit" class="btn btn-primary">
+            <div class="card-footer">
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary btn-block">
                         {{ __('Confirm Password') }}
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 
     {{-- Links --}}
-    <p class="mt-8 text-sm text-center">
-        <a href="javascript:history.back()" class="text-sm text-gray-500 hover:text-gray-600">
+    <p class="mt-8 mb-2 text-sm text-center">
+        <a href="javascript:history.back()" class="text-sm text-gray-500 focus:text-gray-600">
             ← {{ __('Back') }}
         </a>
     </p>

@@ -11,5 +11,6 @@
         </a>
 
         @yield('content-inner')
+    </div>
 </div>
 @endsection

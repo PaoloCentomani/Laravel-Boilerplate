@@ -1,10 +1,6 @@
 .btn {
-    @apply px-3 py-3 font-semibold text-white bg-blue-600 border border-blue-600 rounded-sm appearance-none shadow-glare;
+    @apply px-6 py-3 font-semibold text-white bg-blue-600 border border-blue-600 rounded-sm appearance-none shadow-glare;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-    &:hover {
-        @apply bg-blue-500;
-    }
 
     &:focus {
         @apply outline-none;
@@ -23,4 +19,17 @@
 
 .btn-lg {
     @apply py-5 text-lg;
+}
+
+.btn-block {
+    @apply w-full;
+}
+
+.btn-link {
+    @apply px-6 py-3 text-center text-sm text-gray-600;
+    transition: color 0.15s ease-in-out;
+
+    &:focus {
+        @apply text-gray-500;
+    }
 }

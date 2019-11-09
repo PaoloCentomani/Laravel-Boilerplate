@@ -3,16 +3,17 @@
 @section('title', __('Reset Password'))
 
 @section('content-inner')
-{{-- Card --}}
-<div class="card sm:max-w-sm mx-auto">
-    <div class="card-header">{{ __('Reset Password') }}</div>
+<form method="POST" action="{{ route('password.update') }}">
+    @csrf
+    <input type="hidden" name="token" value="{{ $token }}">
 
-    <div class="card-body">
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+    {{-- Card --}}
+    <div class="card sm:max-w-sm mx-auto">
+        <div class="card-header">
+            {{ __('Reset Password') }}
+        </div>
 
-            <input type="hidden" name="token" value="{{ $token }}">
-
+        <div class="card-body">
             {{-- E-Mail Address --}}
             <div class="form-group">
                 <label for="email">{{ __('E-Mail Address') }}</label>
@@ -51,14 +52,16 @@
                     </div>
                 @enderror
             </div>
+        </div>
 
+        <div class="card-footer">
             {{-- Buttons --}}
-            <div class="form-group mt-4 mb-1">
-                <button type="submit" class="btn btn-primary">
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary btn-block">
                     {{ __('Reset Password') }}
                 </button>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</form>
 @endsection

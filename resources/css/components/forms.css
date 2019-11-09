@@ -34,8 +34,17 @@ label.required:after,
     @apply ml-1 text-blue-500;
 }
 
+/* Buttons... */
+.form-buttons {
+    @apply flex items-center;
+}
+
 /* Screens... */
 @screen md {
+    .form-group:last-child {
+        @apply mb-0;
+    }
+
     .form-row {
         @apply flex flex-wrap mb-3; /* Same value as "margin-bottom" of .form-group... */
 

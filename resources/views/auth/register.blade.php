@@ -3,14 +3,16 @@
 @section('title', __('Register'))
 
 @section('content-inner')
-{{-- Card --}}
-<div class="card sm:max-w-sm mx-auto">
-    <div class="card-header">{{ __('Register') }}</div>
+<form method="POST" action="{{ route('register') }}">
+    @csrf
 
-    <div class="card-body">
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+    {{-- Card --}}
+    <div class="card sm:max-w-sm mx-auto">
+        <div class="card-header">
+            {{ __('Register') }}
+        </div>
 
+        <div class="card-body">
             <div class="form-row">
                 {{-- First Name --}}
                 <div class="form-group required col md:w-1/2 md:pr-2">
@@ -71,20 +73,22 @@
 
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             </div>
+        </div>
 
+        <div class="card-footer">
             {{-- Buttons --}}
-            <div class="form-group mt-4 mb-1">
-                <button type="submit" class="btn btn-primary">
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary btn-block">
                     {{ __('Register') }}
                 </button>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</form>
 
 {{-- Links --}}
-<p class="mt-8 text-sm text-center">
-    <a href="{{ route('login') }}" class="text-sm text-gray-500 hover:text-gray-600">
+<p class="mt-8 mb-2 text-sm text-center">
+    <a href="{{ route('login') }}" class="text-sm text-gray-500 focus:text-gray-600">
         {{ __('Already have an account?') }}
     </a>
 </p>
