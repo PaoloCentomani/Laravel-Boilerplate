@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Support\Gravatar;
+namespace App\Traits;
 
 trait HasGravatar
 {
