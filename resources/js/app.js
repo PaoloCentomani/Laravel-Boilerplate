@@ -23,6 +23,7 @@ Vue.component('v-dropdown', require('./components/Dropdown.vue').default);
 Vue.component('v-example', require('./components/Example.vue').default);
 Vue.component('v-flash', require('./components/Flash.vue').default);
 Vue.component('v-tabs', require('./components/Tabs.vue').default);
+Vue.component('v-toggle-password', require('./components/TogglePassword.vue').default);
 
 Vue.directive('focus', require('./directives/Focus.js'));
 

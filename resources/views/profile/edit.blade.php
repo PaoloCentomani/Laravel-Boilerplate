@@ -47,22 +47,13 @@
                     @enderror
                 </div>
 
-                <div class="form-row mb-0">
-                    {{-- Password --}}
-                    <div class="form-group col md:w-1/2 md:pr-2">
-                        <label for="password">{{ __('New Password') }}</label>
+                {{-- Password --}}
+                <div class="form-group mb-0">
+                    <label for="password">{{ __('Password') }}</label>
 
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
-                    </div>
+                    <v-toggle-password classes="@error('password') is-invalid @enderror"></v-toggle-password>
 
-                    {{-- Confirm password --}}
-                    <div class="form-group col mb-0 md:w-1/2">
-                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
-
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
-                    </div>
-
-                    <p class="form-text">{{ __('Leave this field blank if you don’t want to change your password.') }}</p>
+                    <span class="form-text">{{ __('Leave this field blank if you don’t want to change the password.') }}</span>
 
                     @error('password')
                         <div class="invalid-feedback" role="alert">
