@@ -15,25 +15,6 @@ if (! function_exists('active')) {
     }
 }
 
-if (! function_exists('flash')) {
-    /**
-     * Create a flash message.
-     *
-     * @param  string|null  $message
-     * @return \App\Support\Flash\Notifier
-     */
-    function flash($message = null)
-    {
-        $notifier = app('flash');
-
-        if (is_null($message)) {
-            return $notifier;
-        }
-
-        return $notifier->info($message);
-    }
-}
-
 if (! function_exists('optional_field')) {
     /**
      * Render an optional field that might be null.
