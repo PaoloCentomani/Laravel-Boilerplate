@@ -14,10 +14,23 @@
 
         <div id="navbar-supported-content" class="navbar-collapse sm:flex sm:flex-grow sm:items-center w-full sm:w-auto mt-4 sm:mt-0" :class="isNavOpen ? 'block' : 'hidden'" v-cloak>
             {{-- Left Side Of Navbar --}}
-            <ul class="navbar-nav text-left sm:ml-12 text-sm"></ul>
+            <ul class="navbar-nav text-sm text-left sm:flex-auto sm:ml-12">
+                @can('view backend')
+                <li class="nav-item{{ active('admin.home') }}">
+                    <a class="nav-link" href="{{ route('admin.home') }}">
+                        {{ __('Dashboard') }}
+                    </a>
+                </li>
+                <li class="nav-item{{ active('admin.users.index') }}">
+                    <a class="nav-link" href="{{ route('admin.users.index') }}">
+                        {{ ucfirst(trans('messages.users.plural')) }}
+                    </a>
+                </li>
+                @endcan
+            </ul>
 
             {{-- Right Side Of Navbar --}}
-            <ul class="navbar-nav text-left sm:text-right text-sm sm:flex-grow">
+            <ul class="navbar-nav text-sm text-left sm:text-right">
                 {{-- Authentication Links --}}
                 @guest
                     <li class="nav-item block sm:inline-block mt-4 sm:mt-0 sm:mr-4">
@@ -35,16 +48,6 @@
                         </template>
 
                         <div v-cloak>
-                            @can('view backend')
-                            <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                {{ __('Administrator') }}
-                            </a>
-                            @else
-                            <span class="dropdown-item text-muted">
-                                {{ config('app.name') }}
-                            </span>
-                            @endcan
-
                             <a class="dropdown-item" href="{{ route('profile.edit') }}">
                                 {{ __('Profile') }}
                             </a>

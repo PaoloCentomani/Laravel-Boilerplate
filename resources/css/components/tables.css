@@ -1,27 +1,43 @@
-table {
-    @apply w-full border-collapse;
+.table {
+    @apply w-full;
+
+    thead tr {
+        @apply text-white bg-gray-600;
+    }
+
+    tbody tr {
+        &:first-child td { @apply border-t-0; }
+        &:last-child td { @apply border-b-0; }
+        td:last-child { @apply border-r-0; }
+    }
+
+    tr {
+        @apply cursor-default;
+    }
+
+    th, td {
+        @apply p-2;
+    }
+
+    th {
+        @apply font-semibold;
+    }
+
+    td {
+        @apply border border-gray-200;
+    }
 }
 
-th, td {
-    @apply p-2 border border-gray-300;
-}
-
-
-th {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    @apply text-left;
-}
-
-td {
-    @apply bg-white;
-}
-
-tr {
-    @apply cursor-default;
+.table-hover {
+    tbody tr:hover td {
+        @apply bg-gray-100;
+    }
 }
 
 .table-responsive {
-    overflow-x: auto;
+    @apply overflow-x-auto;
+
+    td {
+        @apply whitespace-no-wrap;
+    }
 }

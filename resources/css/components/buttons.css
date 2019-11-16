@@ -1,5 +1,5 @@
 .btn {
-    @apply px-6 py-3 font-semibold text-white bg-blue-600 border border-blue-600 rounded-sm appearance-none shadow-glare;
+    @apply px-6 py-4 font-semibold leading-none text-white bg-blue-600 border border-blue-600 rounded-sm appearance-none shadow-glare;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:focus {
@@ -10,6 +10,14 @@
     &:active {
         @apply bg-blue-700 border-blue-700;
         box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.btn-danger {
+    @apply bg-red-600 border border-red-600;
+
+    &:active {
+        @apply bg-red-700 border-red-700;
     }
 }
 

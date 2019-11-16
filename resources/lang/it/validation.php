@@ -150,6 +150,7 @@ return [
         'date' => 'data',
         'first_name' => 'nome',
         'last_name' => 'cognome',
+        'roles_id' => 'ruolo',
     ],
 
 ];

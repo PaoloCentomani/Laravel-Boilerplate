@@ -4,11 +4,33 @@
 }
 
 h1 {
-    @apply my-2 font-semibold text-2xl uppercase;
+    @apply my-2 font-semibold text-2xl uppercase cursor-default;
 }
 
 .text-muted {
     @apply text-gray-500;
+}
+
+/* Description Lists... */
+
+dl {
+    @apply flex flex-col cursor-default;
+
+    dt {
+        @apply font-bold;
+        flex-basis: 30%;
+    }
+
+    dd {
+        @apply flex-grow pb-1;
+        flex-basis: 70%;
+    }
+}
+
+@screen md {
+    dl {
+        @apply flex-row flex-wrap;
+    }
 }
 
 /* Links */

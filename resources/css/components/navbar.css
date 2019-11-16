@@ -1,5 +1,24 @@
+.nav-item {
+    &.active a {
+        @apply text-gray-200;
+    }
+}
+
 .nav-link {
-    &.active {
-        @apply text-white;
+    @apply block py-2 text-gray-500;
+    transition: color 0.15s ease-in-out;
+
+    &:focus {
+        @apply text-gray-600;
+    }
+}
+
+@screen sm {
+    .navbar-nav {
+        @apply flex;
+    }
+
+    .nav-link {
+        @apply inline-block px-4 py-0;
     }
 }

@@ -16,14 +16,14 @@
             <div class="card-body">
                 <div class="form-row">
                     {{-- First Name --}}
-                    <div class="form-group col md:w-1/2 md:pr-2">
+                    <div class="form-group md:w-1/2 md:pr-2">
                         <label for="first_name">{{ __('First Name') }}</label>
 
                         <input id="first_name" type="text" class="form-control" value="{{ $user->first_name }}" disabled>
                     </div>
 
                     {{-- Last Name --}}
-                    <div class="form-group col md:w-1/2">
+                    <div class="form-group md:w-1/2 md:pl-2">
                         <label for="last_name">{{ __('Last Name') }}</label>
 
                         <input id="last_name" type="text" class="form-control" value="{{ $user->last_name }}" disabled>
@@ -48,7 +48,7 @@
                 </div>
 
                 {{-- Password --}}
-                <div class="form-group mb-0">
+                <div class="form-group">
                     <label for="password">{{ __('Password') }}</label>
 
                     <v-toggle-password classes="@error('password') is-invalid @enderror"></v-toggle-password>

@@ -48,4 +48,7 @@ Route::middleware('auth')->group(function () {
 // Administrator Routes...
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'permission:view backend'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
+
+    Route::resource('users', 'UserController');
+    Route::patch('users/{id}/restore', 'UserController@restore')->name('users.restore');
 });

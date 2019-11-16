@@ -2,6 +2,7 @@
 
 @import "tailwindcss/components";
 @import "components/alert";
+@import "components/badge";
 @import "components/buttons";
 @import "components/card";
 @import "components/custom-forms";
@@ -10,5 +11,7 @@
 @import "components/pagination";
 @import "components/tables";
 @import "components/type";
+
+@import "layouts/admin";
 
 @import "tailwindcss/utilities";

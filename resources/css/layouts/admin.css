@@ -1,0 +1,63 @@
+.actions {
+    @apply flex;
+
+    a, form {
+        @apply mr-2;
+
+        &:last-child {
+            @apply mr-0;
+        }
+    }
+
+    .btn {
+        @apply flex items-center px-3 py-2 text-sm;
+    }
+
+    svg {
+        @apply inline-block mr-2;
+    }
+}
+
+.search-form {
+    @apply flex relative;
+
+    input {
+        @apply w-48 py-1 bg-white;
+        padding-left: 38px; /* SVG left position + 26px */
+        border-radius: 50px;
+    }
+
+    svg {
+        @apply absolute text-gray-400;
+        top: 10px;
+        left: 12px;
+    }
+}
+
+.links {
+    @apply flex items-center justify-around;
+
+    a {
+        min-width: 1.75rem;
+    }
+
+    a:active,
+    button:active {
+        @apply text-gray-700;
+    }
+
+    button:focus {
+        @apply outline-none;
+        @apply text-gray-600;
+    }
+
+    svg {
+        @apply mx-auto w-4 h-4 fill-current;
+    }
+}
+
+@screen md {
+    .links a {
+        @apply min-w-0;
+    }
+}

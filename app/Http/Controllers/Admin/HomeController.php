@@ -14,10 +14,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
-
-        return view('admin.home', [
-            'users' => $users,
-        ]);
+        return view('admin.home');
     }
 }

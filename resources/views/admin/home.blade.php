@@ -57,35 +57,6 @@
         </div>
     </section>
 
-    {{-- Tables --}}
-    <section class="mt-8">
-        <h1>Tables</h1>
-
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome e cognome</th>
-                        <th>E-mail</th>
-                        <th>Iscritto il</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @foreach ($users as $user)
-                    <tr>
-                        <td>{{ $user->fullName }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->created_at->format(config('boilerplate.time.default')) }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-
-        {{ $users->links() }}
-    </section>
-
     {{-- Custom Scrollbar --}}
     <section class="md:flex mt-8">
         <div class="md:w-1/2 md:mr-2">
