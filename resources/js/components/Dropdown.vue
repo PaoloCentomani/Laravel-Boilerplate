@@ -64,29 +64,3 @@
         }
     };
 </script>
-
-<style>
-    .dropdown-menu {
-        @apply leading-loose text-sm;
-        min-width: 10rem;
-    }
-
-    .dropdown-item {
-        @apply block pl-4 pr-12 py-1 whitespace-no-wrap;
-    }
-
-    a.dropdown-item {
-        &:hover {
-            @apply text-white bg-blue-600;
-        }
-
-        &:active {
-            @apply bg-blue-700;
-            transition: background ease-in-out 0.15s;
-        }
-    }
-
-    .dropdown-divider {
-        @apply my-2 border-b border-gray-300;
-    }
-</style>
