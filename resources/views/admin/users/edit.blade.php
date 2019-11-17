@@ -4,7 +4,6 @@
 
 @section('content')
 <div class="container mx-auto">
-    {{-- Breadcrumb --}}
     <h1 class="mt-0 mb-4">
         @yield('title')
     </h1>

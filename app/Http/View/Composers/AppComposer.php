@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace App\Http\View\Composers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;

@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
+use App\Http\View\Composers\AppComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class ComposerServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
     /**
      * Register the application services.
@@ -25,7 +26,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
-            'layouts.app', \App\Http\ViewComposers\AppComposer::class
+            'layouts.app', AppComposer::class
         );
     }
 }

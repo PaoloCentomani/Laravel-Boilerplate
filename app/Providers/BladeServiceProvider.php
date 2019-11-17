@@ -27,7 +27,7 @@ class BladeServiceProvider extends ServiceProvider
         Blade::directive('widget', function ($expression) {
             $name = trim($expression, "'");
 
-            return "<?php echo resolve('App\Http\Widgets\\{$name}')->view(); ?>";
+            return "<?php echo resolve('App\Http\View\Widgets\\{$name}')->view(); ?>";
         });
 
         Blade::directive('svg', function ($expression) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Widgets;
+namespace App\Http\View\Widgets;
 
 class ExampleWidget extends Widget
 {

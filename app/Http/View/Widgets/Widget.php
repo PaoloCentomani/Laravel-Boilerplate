@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Widgets;
+namespace App\Http\View\Widgets;
 
 use ReflectionClass;
 use ReflectionMethod;
