@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('v-dropdown', require('./components/Dropdown.vue').default);
 Vue.component('v-example', require('./components/Example.vue').default);
 Vue.component('v-flash', require('./components/Flash.vue').default);
+Vue.component('v-modal', require('./components/Modal.vue').default);
 Vue.component('v-tabs', require('./components/Tabs.vue').default);
 Vue.component('v-toggle-password', require('./components/TogglePassword.vue').default);
 
@@ -37,7 +38,8 @@ const app = new Vue({
     el: '#app',
 
     data: {
-        isNavOpen: false,
+        isModalOpen: false,
+        isNavOpen: false
     },
 
     mounted() {

@@ -6,7 +6,7 @@
 <div class="container mx-auto">
     <div class="mb-4 md:flex md:justify-between md:items-center">
         <h1 class="m-0">
-            {{ ucfirst(trans('messages.users.plural')) }}
+            @yield('title')
         </h1>
 
         <div class="flex justify-between mt-2 md:mt-0">

@@ -21,7 +21,7 @@
                         {{ __('Dashboard') }}
                     </a>
                 </li>
-                <li class="nav-item{{ active('admin.users.index') }}">
+                <li class="nav-item{{ active('admin.users.*') }}">
                     <a class="nav-link" href="{{ route('admin.users.index') }}">
                         {{ ucfirst(trans('messages.users.plural')) }}
                     </a>

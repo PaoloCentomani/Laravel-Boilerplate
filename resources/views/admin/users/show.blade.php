@@ -5,11 +5,8 @@
 @section('content')
 <div class="container mx-auto">
     <div class="mb-4 md:flex md:justify-between md:items-center">
-        {{-- Breadcrumb --}}
         <h1 class="m-0">
-            <a href="{{ route('admin.users.index') }}">
-                {{ trans('messages.users.plural') }}
-            </a> › {{ $user->fullName }}
+            @yield('title')
         </h1>
 
         <div class="actions">

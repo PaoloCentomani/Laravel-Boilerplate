@@ -6,9 +6,7 @@
 <div class="container mx-auto">
     {{-- Breadcrumb --}}
     <h1 class="mt-0 mb-4">
-        <a href="{{ route('admin.users.index') }}">
-            {{ trans('messages.users.plural') }}
-        </a> › {{ $user->fullName }}
+        @yield('title')
     </h1>
 
     {{-- Form --}}

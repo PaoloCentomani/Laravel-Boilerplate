@@ -6,9 +6,7 @@
 <div class="container mx-auto">
     {{-- Breadcrumb --}}
     <h1 class="mt-0 mb-4">
-        <a href="{{ route('admin.users.index') }}">
-            {{ trans('messages.users.plural') }}
-        </a> › @lang('messages.cruds.actions.create') @lang('messages.users.singular')
+        @yield('title')
     </h1>
 
     {{-- Form --}}

@@ -21,8 +21,12 @@
     }
 }
 
+.btn-xs {
+    @apply px-2 py-1 text-xs;
+}
+
 .btn-sm {
-    @apply py-2 text-sm;
+    @apply px-4 py-2 text-sm;
 }
 
 .btn-lg {

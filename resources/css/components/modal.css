@@ -1,0 +1,50 @@
+.modal {
+    @apply flex flex-col items-center justify-center p-4;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.15s ease;
+
+    .close {
+        @apply -mr-4 px-4;
+
+        &:active {
+            @apply text-gray-700;
+        }
+    }
+}
+
+.modal-dialog {
+    @apply w-full p-4 bg-white rounded shadow-xl;
+    transition: transform 0.15s ease;
+
+    .modal-header {
+        @apply flex justify-between pb-4 font-semibold text-2xl leading-tight cursor-default;
+    }
+
+    .modal-body {
+        @apply cursor-default;
+    }
+
+    .modal-footer {
+        @apply pt-2 text-right;
+    }
+}
+
+/* Transition... */
+
+.modal-enter,
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-dialog,
+.modal-leave-active .modal-dialog {
+  transform: scale(0.95);
+}
+
+/* Screens... */
+
+@screen md {
+    .modal-dialog {
+        @apply max-w-xl;
+    }
+}
