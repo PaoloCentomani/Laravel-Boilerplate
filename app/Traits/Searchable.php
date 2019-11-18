@@ -25,10 +25,12 @@ trait Searchable
 
                 if (count($parts) > 1) {
                     $query->orWhereHas($parts[0], function ($q) use ($parts, $keyword) {
-                        $q->where("$parts[0].$parts[1]", 'like', "%$keyword%");
+                        $table = $this->{$parts[0]}()->getRelated()->getTable();
+
+                        $q->where("{$table}.{$parts[1]}", 'like', "%{$keyword}%");
                     });
                 } else {
-                    $query->orWhere($parts[0], 'like', "%$keyword%");
+                    $query->orWhere($parts[0], 'like', "%{$keyword}%");
                 }
             }
         });
