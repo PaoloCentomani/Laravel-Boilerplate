@@ -70,7 +70,11 @@
             <div class="card-body">
                 <dl>
                     <dt>@lang('messages.roles.fields.name')</dt>
-                    <dd>@lang("messages.roles.{$user->roles->first()->name}")</dd>
+                    <dd>
+                        @foreach ($user->roles as $role)
+                        <div>@lang("messages.roles.{$role->name}")</div>
+                        @endforeach
+                    </dd>
                 </dl>
             </div>
         </div>
