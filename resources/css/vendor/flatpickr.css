@@ -1,9 +1,42 @@
 @import 'flatpickr/dist/flatpickr';
 
-.flatpickr-day.selected {
-    @apply border-blue-600 bg-blue-500;
+.flatpickr-calendar {
+    @apply shadow-xl;
 
+    /* Disable the top arrow... */
+    &:before,
+    &:after {
+        @apply hidden;
+    }
+
+    .flatpickr-innerContainer {
+        @apply pt-2;
+    }
+}
+
+span.flatpickr-weekday {
+    @apply text-gray-600;
+}
+
+.flatpickr-day {
     &:hover {
-        @apply border-blue-600 bg-blue-600;
+        @apply bg-gray-300 border-gray-300;
+    }
+
+    &.selected {
+        @apply border-blue-600 bg-blue-500;
+
+        &:hover {
+            @apply border-blue-600 bg-blue-600;
+        }
+    }
+
+    &.prevMonthDay,
+    &.nextMonthDay {
+        @apply text-gray-400;
+
+        &:hover {
+            @apply text-gray-400 bg-transparent border-gray-400;
+        }
     }
 }
