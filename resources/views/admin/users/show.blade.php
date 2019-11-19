@@ -36,6 +36,28 @@
 
             <div class="card-body">
                 <dl>
+                    <dt>@lang('messages.cruds.fields.id')</dt>
+                    <dd>{{ $user->id }}</dd>
+                </dl>
+
+                <dl class="mt-3">
+                    <dt>@lang('messages.cruds.fields.created_at')</dt>
+                    <dd>{{ $user->created_at->format(config('boilerplate.time.default')) }}</dd>
+
+                    <dt>@lang('messages.cruds.fields.updated_at')</dt>
+                    <dd>{{ $user->updated_at->format(config('boilerplate.time.default')) }}</dd>
+                </dl>
+            </div>
+        </div>
+
+        {{-- User Attributes --}}
+        <div class="card mt-4 md:w-1/2 md:mt-0 md:ml-2">
+            <div class="card-header">
+                {{ __('Attributes') }}
+            </div>
+
+            <div class="card-body">
+                <dl class="mt-3">
                     <dt>@lang('messages.users.fields.first_name')</dt>
                     <dd>{{ $user->first_name }}</dd>
 
@@ -49,27 +71,7 @@
                 </dl>
 
                 <dl class="mt-3">
-                    <dt>@lang('messages.cruds.fields.id')</dt>
-                    <dd>{{ $user->id }}</dd>
-
-                    <dt>@lang('messages.cruds.fields.created_at')</dt>
-                    <dd>{{ $user->created_at->format(config('boilerplate.time.default')) }}</dd>
-
-                    <dt>@lang('messages.cruds.fields.updated_at')</dt>
-                    <dd>{{ $user->updated_at->format(config('boilerplate.time.default')) }}</dd>
-                </dl>
-            </div>
-        </div>
-
-        {{-- Roles --}}
-        <div class="card mt-4 md:w-1/2 md:mt-0 md:ml-2">
-            <div class="card-header">
-                {{ ucfirst(trans('messages.roles.singular')) }}
-            </div>
-
-            <div class="card-body">
-                <dl>
-                    <dt>@lang('messages.roles.fields.name')</dt>
+                    <dt>{{ ucfirst(trans('messages.roles.plural')) }}</dt>
                     <dd>
                         @foreach ($user->roles as $role)
                         <div>@lang("messages.roles.{$role->name}")</div>
