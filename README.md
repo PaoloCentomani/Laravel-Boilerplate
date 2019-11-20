@@ -33,4 +33,5 @@ php artisan migrate --seed
 cp .env.example .env
 php artisan key:generate
 php artisan storage:link
+php artisan vendor:publish --tag=telescope-assets
 ```
