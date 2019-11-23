@@ -15,6 +15,19 @@ if (! function_exists('active')) {
     }
 }
 
+if (! function_exists('money_field')) {
+    /**
+     * Render a money field.
+     *
+     * @param  string  $field
+     * @return string
+     */
+    function money_field($field)
+    {
+        return money_format('%!.2n €', $field);
+    }
+}
+
 if (! function_exists('optional_field')) {
     /**
      * Render an optional field that might be null.
