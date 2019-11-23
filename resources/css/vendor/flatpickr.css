@@ -1,5 +1,10 @@
 @import 'flatpickr/dist/flatpickr';
 
+//  Fix for Google Chrome on Android...
+input[type="datetime-local"] {
+    @apply bg-white;
+}
+
 .flatpickr-calendar {
     @apply shadow-xl;
 

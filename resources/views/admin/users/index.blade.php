@@ -27,7 +27,7 @@
     @include('shared.search')
 
     @if ($users->isEmpty())
-    <p>{{ __('There is no data to display.') }}</p>
+    @include('shared.empty')
     @else
     <div class="card">
         <div class="card-body p-0">
@@ -67,7 +67,7 @@
                                         @csrf
                                         @method('PATCH')
 
-                                        <a href="#" onclick="confirm('{{ __('Confirm restoring :name?', ['name' => $user->fullName]) }}') && this.parentNode.submit()" class="cursor-pointer">
+                                        <a href="javascript:" onclick="confirm('{{ __('Confirm restoring :name?', ['name' => $user->fullName]) }}') && this.parentNode.submit()" class="cursor-pointer">
                                             @svg('restore', trans('messages.cruds.actions.restore'))
                                         </a>
                                     </form>

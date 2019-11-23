@@ -11,6 +11,14 @@
         td:last-child { @apply border-r-0; }
     }
 
+    tfoot {
+        @apply border-t border-gray-200;
+
+        td {
+            @apply py-1 border-none;
+        }
+    }
+
     tr {
         @apply cursor-default;
     }
