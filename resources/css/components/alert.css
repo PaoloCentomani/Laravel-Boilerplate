@@ -6,6 +6,7 @@
     transform: scale(0.8);
     transition: all 0.25s ease-in-out;
 
+    /* purgecss start ignore */
     &.alert-danger {
         @apply text-red-100 bg-red-600;
     }
@@ -17,6 +18,7 @@
     &.alert-warning {
         @apply text-yellow-100 bg-yellow-600;
     }
+    /* purgecss end ignore */
 
     &:hover {
         @apply opacity-75 !important;

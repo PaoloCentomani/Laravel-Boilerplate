@@ -1,5 +1,5 @@
 <template>
-    <div class="alert cursor-pointer" :class="[level, { 'open': isOpen }]" role="alert" @click="isOpen = false">
+    <div class="alert cursor-pointer" :class="[`alert-${level}`, { 'open': isOpen }]" role="alert" @click="isOpen = false">
         <slot></slot>
 
         <span class="ml-3 opacity-50 text-xl leading-none" aria-hidden="true">×</span>

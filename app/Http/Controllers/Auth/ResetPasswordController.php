@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
 {
@@ -24,24 +24,7 @@ class ResetPasswordController extends Controller
     /**
      * Where to redirect users after resetting their password.
      *
-     * @return string
+     * @var string
      */
-    public function redirectTo()
-    {
-        return route('home');
-    }
-
-    /**
-     * Get the response for a successful password reset.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
-     */
-    protected function sendResetResponse(Request $request, $response)
-    {
-        flash()->success(trans($response));
-
-        return redirect($this->redirectPath());
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
 }

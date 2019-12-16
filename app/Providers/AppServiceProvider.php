@@ -33,9 +33,9 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale(config('app.locale'));
 
         Flash::levels([
-            'error' => 'alert-danger',
-            'success' => 'alert-success',
-            'warning' => 'alert-warning',
+            'error' => 'danger',
+            'success' => 'success',
+            'warning' => 'warning',
         ]);
     }
 }
