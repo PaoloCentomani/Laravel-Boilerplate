@@ -3,7 +3,7 @@
 @section('title', __('Reset Password'))
 
 @section('content-inner')
-<form method="POST" action="{{ route('password.update') }}">
+<form method="POST" action="{{ route('password.update') }}" v-disable-submit>
     @csrf
     <input type="hidden" name="token" value="{{ $token }}">
 

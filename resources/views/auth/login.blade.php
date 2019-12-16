@@ -3,7 +3,7 @@
 @section('title', __('Login'))
 
 @section('content-inner')
-<form method="POST" action="{{ route('login') }}">
+<form method="POST" action="{{ route('login') }}" v-disable-submit>
     @csrf
 
     {{-- Card --}}

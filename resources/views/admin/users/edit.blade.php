@@ -9,7 +9,7 @@
     </h1>
 
     {{-- Form --}}
-    <form method="POST" action="{{ route('admin.users.update', $user) }}" autocomplete="off">
+    <form method="POST" action="{{ route('admin.users.update', $user) }}" autocomplete="off" v-disable-submit>
         @csrf
         @method('PUT')
 

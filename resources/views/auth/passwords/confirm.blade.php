@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mx-auto">
-    <form method="POST" action="{{ route('password.confirm') }}">
+    <form method="POST" action="{{ route('password.confirm') }}" v-disable-submit>
         @csrf
 
         {{-- Card --}}
