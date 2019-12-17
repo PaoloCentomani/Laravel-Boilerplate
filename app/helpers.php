@@ -24,7 +24,7 @@ if (! function_exists('money_field')) {
      */
     function money_field($field)
     {
-        return (new NumberFormatter(config('dpgest.php_locale'), NumberFormatter::CURRENCY))->format($field);
+        return (new NumberFormatter(config('boilerplate.php_locale'), NumberFormatter::CURRENCY))->format($field);
     }
 }
 
