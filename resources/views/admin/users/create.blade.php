@@ -79,7 +79,7 @@
 
                 {{-- Roles --}}
                 <div class="form-group required">
-                    <label for="role_id">{{ __('Role') }}</label>
+                    <label for="role_id">{{ ucfirst(trans('messages.roles.singular')) }}</label>
 
                     <select name="role_id" id="role_id" class="form-control custom-select" required>
                         <option value="">{{ __('Choose…') }}</option>
