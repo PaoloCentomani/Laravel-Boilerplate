@@ -55,20 +55,11 @@
                     @enderror
                 </div>
 
-                <div class="form-row">
-                    {{-- Password --}}
-                    <div class="form-group required md:w-1/2 md:pr-2">
-                        <label for="password">{{ __('Password') }}</label>
+                {{-- Password --}}
+                <div class="form-group required">
+                    <label for="password">{{ __('Password') }}</label>
 
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                    </div>
-
-                    {{-- Confirm password --}}
-                    <div class="form-group required md:w-1/2 md:pl-2">
-                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
-
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                    </div>
+                    <v-toggle-password classes="@error('password') is-invalid @enderror"></v-toggle-password>
 
                     @error('password')
                         <div class="invalid-feedback" role="alert">
