@@ -19,6 +19,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+Vue.component('v-datetimepicker', require('./components/DateTimePicker.vue').default);
 Vue.component('v-dropdown', require('./components/Dropdown.vue').default);
 Vue.component('v-example', require('./components/Example.vue').default);
 Vue.component('v-flash', require('./components/Flash.vue').default);
@@ -41,15 +42,5 @@ const app = new Vue({
     data: {
         isModalOpen: false,
         isNavOpen: false
-    },
-
-    mounted() {
-        flatpickr('.datetimepicker', {
-            altInput: true,
-            altFormat: "j F Y H:i",
-            dateFormat: 'Y-m-d H:i',
-            enableTime: true,
-            time_24hr: true,
-        });
     }
 });

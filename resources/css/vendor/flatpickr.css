@@ -17,6 +17,12 @@ input[type="datetime-local"] {
     .flatpickr-innerContainer {
         @apply pt-2;
     }
+
+    /* Next/Previous arrows... */
+    .flatpickr-next-month:hover svg,
+    .flatpickr-prev-month:hover svg {
+        fill: theme('colors.blue.500');
+    }
 }
 
 span.flatpickr-weekday {
@@ -42,6 +48,35 @@ span.flatpickr-weekday {
 
         &:hover {
             @apply text-gray-400 bg-transparent border-gray-400;
+        }
+    }
+}
+
+/* Time... */
+.flatpickr-time {
+    .numInputWrapper:hover {
+        @apply bg-gray-100;
+
+        input {
+            @apply text-blue-500;
+        }
+    }
+
+    input {
+        &:focus,
+        &:hover {
+            @apply bg-gray-100;
+        }
+    }
+
+    .arrowUp,
+    .arrowDown {
+        &:hover {
+            @apply bg-transparent;
+        }
+
+        &:active {
+            @apply bg-gray-200;
         }
     }
 }

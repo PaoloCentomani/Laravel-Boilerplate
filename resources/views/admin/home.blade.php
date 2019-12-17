@@ -42,7 +42,9 @@
 
             <div class="card-body md:flex">
                 <div class="md:w-1/2 md:mr-1">
-                    <select class="form-control custom-select">
+                    <label for="custom-select">Select</label>
+
+                    <select class="form-control custom-select" id="custom-select">
                         <option value="">{{ __('Choose…') }}</option>
                         <option value="">Lorem ipsum</option>
                         <option value="">Ut enim</option>
@@ -51,7 +53,7 @@
                 </div>
 
                 <div class="md:w-1/2 mt-4 md:mt-0 md:ml-1">
-                    <input type="date" class="form-control datetimepicker" placeholder="Data">
+                    <v-datetimepicker :enable-time="true" id="datetimepicker" label="Date Picker" placeholder="{{ __('Choose…') }}"></v-datetimepicker>
                 </div>
             </div>
         </div>
