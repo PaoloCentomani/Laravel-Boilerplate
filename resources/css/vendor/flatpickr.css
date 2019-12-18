@@ -80,3 +80,17 @@ span.flatpickr-weekday {
         }
     }
 }
+
+/* Confirm Plugin... */
+.flatpickr-confirm {
+    @apply hidden py-2 font-semibold text-blue-500 cursor-pointer;
+    border-top: 1px solid #e6e6e6;
+
+    &.visible {
+        @apply block;
+    }
+
+    &:active {
+        @apply outline-none bg-gray-100;
+    }
+}
