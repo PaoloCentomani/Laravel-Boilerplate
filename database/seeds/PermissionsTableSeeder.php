@@ -9,7 +9,7 @@ use Spatie\Permission\PermissionRegistrar;
 class PermissionsTableSeeder extends Seeder
 {
     /**
-     * The permissions grouped by role.
+     * The permissions to be seeded.
      *
      * @var array
      */
@@ -36,7 +36,7 @@ class PermissionsTableSeeder extends Seeder
 
         foreach ($this->permissions as $role => $permissions) {
             foreach ($permissions as $permission) {
-                Permission::create(['name' => $permission]);
+                Permission::findOrCreate($permission);
             }
 
             Role::create(['name' => $role])
