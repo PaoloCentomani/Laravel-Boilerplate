@@ -10,7 +10,7 @@
         {{-- Card --}}
         <div class="card sm:max-w-sm mx-auto">
             <div class="card-header">
-                {{ __('Confirm Password') }}
+                @svg('lock', __('Protected Content'), 'w-8 h-8 mx-auto fill-current')
             </div>
 
             <div class="card-body">
@@ -35,7 +35,7 @@
             <div class="card-footer">
                 <div class="form-buttons">
                     <button type="submit" class="btn btn-primary btn-block">
-                        {{ __('Confirm Password') }}
+                        {{ __('Continue') }}
                     </button>
                 </div>
             </div>
