@@ -34,6 +34,7 @@
     "Not Found": "Non trovato",
     "Page Expired": "Pagina scaduta",
     "Password": "Password",
+    "Password must be at least 10 characters long and contain one lowercase letter, one uppercase letter and one digit.": "La password deve essere lunga almeno 10 caratteri, di cui almeno una lettera minuscola, una maiuscola e un numero.",
     "Please click the button below to verify your email address.": "Clicca il pulsante qui sotto per verificare il tuo indirizzo e-mail.",
     "Please confirm your password before continuing.": "Conferma la tua password per procedere.",
     "Profile": "Profilo",

@@ -21,6 +21,10 @@
     &:focus {
         @apply outline-none border-blue-300 shadow-outline;
     }
+
+    &[readonly] {
+        @apply cursor-not-allowed;
+    }
 }
 
 .form-text {

@@ -64,6 +64,10 @@
                     <div class="invalid-feedback" role="alert">
                         {{ $message }}
                     </div>
+                @else
+                    <span class="form-text">
+                        {{ __('Password must be at least 10 characters long and contain one lowercase letter, one uppercase letter and one digit.') }}
+                    </span>
                 @enderror
             </div>
 
