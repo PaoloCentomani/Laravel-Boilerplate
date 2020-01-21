@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mx-auto">
     {{-- Form --}}
-    <form method="POST" action="{{ route('profile.update') }}" v-disable-submit>
+    <form method="POST" action="{{ route('profile.update') }}" v-submit>
         @csrf
         @method('PUT')
 

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mx-auto">
-    <form method="POST" action="{{ route('password.confirm') }}" v-disable-submit>
+    <form method="POST" action="{{ route('password.confirm') }}" v-submit>
         @csrf
 
         {{-- Card --}}
@@ -44,7 +44,7 @@
 
     {{-- Links --}}
     <p class="mt-8 mb-2 text-sm text-center">
-        <a href="javascript:history.back()" class="text-sm text-gray-500 focus:text-gray-600">
+        <a href="{{ url()->previous() }}" class="text-sm text-gray-500 focus:text-gray-600">
             ← {{ __('Back') }}
         </a>
     </p>

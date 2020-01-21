@@ -9,7 +9,7 @@
     </h1>
 
     {{-- Form --}}
-    <form method="POST" action="{{ route('admin.users.update', $user) }}" autocomplete="off" v-disable-submit>
+    <form method="POST" action="{{ route('admin.users.update', $user) }}" autocomplete="off" v-submit>
         @csrf
         @method('PUT')
 
@@ -100,7 +100,7 @@
                         {{ __('Save Changes') }}
                     </button>
 
-                    <a href="{{ route('admin.users.index') }}" class="btn-link">
+                    <a href="{{ url()->previous() }}" class="btn-link">
                         {{ __('Cancel') }}
                     </a>
                 </div>

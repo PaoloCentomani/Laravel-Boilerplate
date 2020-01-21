@@ -15,7 +15,7 @@
                 @lang('messages.cruds.actions.edit')
             </a>
 
-            <form method="POST" action="{{ route('admin.users.destroy', $user) }}" onsubmit="return confirm('{{ __('Confirm deleting :name?', ['name' => $user->fullName]) }}');">
+            <form method="POST" action="{{ route('admin.users.destroy', $user) }}" v-submit="'{{ __('Confirm deleting :name?', ['name' => $user->fullName]) }}'">
                 @csrf
                 @method('DELETE')
 

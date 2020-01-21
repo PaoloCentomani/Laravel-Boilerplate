@@ -3,7 +3,7 @@
 @section('title', __('Reset Password'))
 
 @section('content-inner')
-<form method="POST" action="{{ route('password.email') }}" v-disable-submit>
+<form method="POST" action="{{ route('password.email') }}" v-submit>
     @csrf
 
     {{-- Card --}}
