@@ -46,6 +46,19 @@ if (! function_exists('optional_field')) {
     }
 }
 
+if (! function_exists('percentage_field')) {
+    /**
+     * Render a percentage field.
+     *
+     * @param  string  $field
+     * @return string
+     */
+    function percentage_field($field)
+    {
+        return (new NumberFormatter(config('boilerplate.php_locale'), NumberFormatter::PERCENT))->format($field);
+    }
+}
+
 if (! function_exists('svg')) {
     /**
      * Render an SVG file.
