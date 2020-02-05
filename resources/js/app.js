@@ -27,7 +27,7 @@ Vue.component('v-modal', require('./components/Modal.vue').default);
 Vue.component('v-tabs', require('./components/Tabs.vue').default);
 Vue.component('v-toggle-password', require('./components/TogglePassword.vue').default);
 
-Vue.directive('disable-submit', require('./directives/DisableSubmit.js'));
+Vue.directive('submit', require('./directives/Submit.js'));
 Vue.directive('focus', require('./directives/Focus.js'));
 
 /**

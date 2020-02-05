@@ -97,6 +97,10 @@
         &:focus + .close {
             @apply flex;
         }
+
+        &[readonly] {
+            @apply cursor-text;
+        }
     }
 
     .close:hover {

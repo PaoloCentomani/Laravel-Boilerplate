@@ -13,7 +13,7 @@
     }
 
     &:disabled {
-        @apply opacity-75;
+        @apply opacity-75 cursor-not-allowed;
         transition: opacity 0.15s linear;
     }
 }
