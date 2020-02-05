@@ -9,6 +9,7 @@
 * Lightweight, well-mantained JavaScript plugins: [flatpickr](https://flatpickr.js.org/), [SimpleBar](http://grsmto.github.io/simplebar/)
 * Useful Blade directives: `@svg`, `@widget`
 * Roles and permissions using [Laravel Permission](https://docs.spatie.be/laravel-permission/v3/introduction/)
+* Filtering with [Laravel Query Builder](https://docs.spatie.be/laravel-query-builder/v2/introduction/)
 * [Deployer](https://deployer.org/) support
 
 Make sure to check the companion [Laravel Resources](https://github.com/PaoloCentomani/Laravel-Resources)  repository for more boilerplate code.

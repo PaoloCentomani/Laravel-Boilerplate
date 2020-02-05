@@ -3,7 +3,6 @@
 namespace App;
 
 use App\Traits\HasGravatar;
-use App\Traits\Searchable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,7 +12,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasGravatar, HasRoles, Notifiable, Searchable, SoftDeletes;
+    use HasGravatar, HasRoles, Notifiable, SoftDeletes;
 
     /**
      * The table associated with the model.
@@ -47,15 +46,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-    ];
-
-    /**
-     * The attributes that are searchable.
-     *
-     * @var array
-     */
-    protected $searchable = [
-        'email', 'first_name', 'last_name',
     ];
 
     /**

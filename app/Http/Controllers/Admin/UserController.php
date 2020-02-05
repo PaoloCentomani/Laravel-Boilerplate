@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Queries\Admin\UsersQuery;
 use App\Http\Requests\Admin\StoreUser;
 use App\Http\Requests\Admin\UpdateUser;
 use App\User;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
@@ -15,23 +17,20 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @return \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::with('roles')->withTrashed();
+        $users = new UsersQuery;
 
-        if ($search = request()->input('s')) {
-            $users = $users->search($search);
-
-            if ($users->count() === 1) {
-                return redirect()->route('admin.users.show', $users->first());
-            }
+        if ($users->count() === 1) {
+            return redirect()->route('admin.users.show', $users->first());
         }
 
         return view('admin.users.index', [
-            'search' => $search,
-            'users' => $users->latest()->paginate(),
+            'search' => $request->input('filter.s'),
+            'users' => $users->paginate()->appends($request->query()),
         ]);
     }
 

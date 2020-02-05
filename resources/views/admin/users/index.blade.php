@@ -11,7 +11,7 @@
 
         <div class="flex justify-between mt-2 md:mt-0">
             <form method="GET" action="{{ route('admin.users.index') }}" class="search-form md:mr-4" autocomplete="off">
-                <input type="search" class="form-control" name="s" minlength="3" aria-label="@lang('messages.cruds.actions.search')">
+                <input type="search" class="form-control" name="filter[s]" minlength="3" aria-label="@lang('messages.cruds.actions.search')">
                 @svg('search', trans('messages.cruds.actions.search'), 'w-5 h-5 fill-current')
             </form>
 
