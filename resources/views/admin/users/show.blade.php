@@ -27,9 +27,9 @@
         </div>
     </div>
 
-    <div class="md:flex">
+    <div class="md:grid md:grid-cols-2 md:gap-4">
         {{-- User --}}
-        <div class="card md:w-1/2 md:mr-2">
+        <div class="card">
             <div class="card-header">
                 {{ ucfirst(trans('messages.users.singular')) }}
             </div>
@@ -51,7 +51,7 @@
         </div>
 
         {{-- User Attributes --}}
-        <div class="card mt-4 md:w-1/2 md:mt-0 md:ml-2">
+        <div class="card mt-4 md:mt-0">
             <div class="card-header">
                 {{ __('Attributes') }}
             </div>

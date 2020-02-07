@@ -4,8 +4,8 @@
 
 @section('content')
 <div class="container mx-auto">
-    <section class="md:flex">
-        <div class="card md:w-1/2 md:mr-2">
+    <section class="md:grid md:grid-cols-2 md:gap-4">
+        <div class="card">
             <div class="card-header">Dashboard</div>
 
             <div class="card-body">
@@ -13,11 +13,11 @@
             </div>
         </div>
 
-        <v-example class="mt-6 md:w-1/2 md:mt-0 md:ml-2"></v-example>
+        <v-example class="mt-8 md:mt-0"></v-example>
     </section>
 
     {{-- Tabs --}}
-    <section class="md:flex mt-10">
+    <section class="mt-8">
         <v-tabs id="tab-sample" v-cloak>
             <v-tab title="Lorem ipsum" active>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -34,14 +34,14 @@
     </section>
 
     {{-- Custom Forms --}}
-    <section class="mt-6">
+    <section class="mt-8">
         <div class="card">
             <div class="card-header">
                 Custom Forms
             </div>
 
-            <div class="card-body md:flex">
-                <div class="md:w-1/2 md:mr-1">
+            <div class="card-body md:grid md:grid-cols-2 md:gap-4">
+                <div>
                     <label for="custom-select">Select</label>
 
                     <select class="form-control custom-select" id="custom-select">
@@ -52,7 +52,7 @@
                     </select>
                 </div>
 
-                <div class="md:w-1/2 mt-4 md:mt-0 md:ml-1">
+                <div class="mt-4 md:mt-0">
                     <v-datetimepicker :enable-time="true" id="datetimepicker" label="Date Picker" placeholder="{{ __('Choose…') }}"></v-datetimepicker>
                 </div>
             </div>
@@ -60,12 +60,12 @@
     </section>
 
     {{-- Custom Scrollbar --}}
-    <section class="md:flex mt-8">
-        <div class="md:w-1/2 md:mr-2">
+    <section class="mt-8 md:grid md:grid-cols-2 md:gap-4">
+        <div>
             @widget('ExampleWidget')
         </div>
 
-        <div class="md:w-1/2 md:ml-2">
+        <div class="mt-4 md:mt-0">
             <h1>Custom Scrollbar</h1>
 
             <div class="h-48" data-simplebar>

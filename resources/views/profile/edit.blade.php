@@ -15,16 +15,16 @@
             </div>
 
             <div class="card-body">
-                <div class="form-row">
+                <div class="form-row md:grid-cols-2">
                     {{-- First Name --}}
-                    <div class="form-group md:w-1/2 md:pr-2">
+                    <div class="form-group">
                         <label for="first_name">{{ __('First Name') }}</label>
 
                         <input id="first_name" type="text" class="form-control" value="{{ $user->first_name }}" disabled>
                     </div>
 
                     {{-- Last Name --}}
-                    <div class="form-group md:w-1/2 md:pl-2">
+                    <div class="form-group">
                         <label for="last_name">{{ __('Last Name') }}</label>
 
                         <input id="last_name" type="text" class="form-control" value="{{ $user->last_name }}" disabled>
@@ -71,7 +71,7 @@
                         {{ __('Save Changes') }}
                     </button>
 
-                    <a href="{{ route('home') }}" class="btn-link">
+                    <a href="{{ url()->previous() }}" class="btn-link">
                         {{ __('Cancel') }}
                     </a>
                 </div>

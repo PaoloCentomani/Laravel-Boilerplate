@@ -16,12 +16,14 @@ require('laravel-mix-purgecss');
 mix.js('resources/js/app.js', 'public/js').extract();
 
 mix.postCss('resources/css/vendor.css', 'public/css', [
+    require('postcss-color-function'),
     require('postcss-import'),
     require('postcss-nested'),
     require('tailwindcss')('tailwind.config.js')
 ]);
 
 mix.postCss('resources/css/app.css', 'public/css', [
+    require('postcss-color-function'),
     require('postcss-import'),
     require('postcss-nested'),
     require('tailwindcss')('tailwind.config.js')

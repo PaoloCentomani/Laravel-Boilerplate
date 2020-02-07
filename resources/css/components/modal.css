@@ -1,7 +1,6 @@
 .modal {
-    @apply flex flex-col items-center justify-center p-4;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.15s ease;
+    @apply flex flex-col items-center justify-center p-4 transition-opacity duration-200 ease-in-out;
+    background-color: color(theme('colors.black') a(50%));
 
     .close {
         @apply -mr-4 px-4;
@@ -13,8 +12,7 @@
 }
 
 .modal-dialog {
-    @apply w-full p-4 bg-white rounded shadow-xl;
-    transition: transform 0.15s ease;
+    @apply w-full p-4 bg-white rounded transform transition-transform duration-200 ease-in-out shadow-xl;
 
     .modal-header {
         @apply flex justify-between pb-4 font-semibold text-2xl leading-tight cursor-default;
@@ -33,12 +31,12 @@
 
 .modal-enter,
 .modal-leave-active {
-    opacity: 0;
+    @apply opacity-0;
 }
 
 .modal-enter .modal-dialog,
 .modal-leave-active .modal-dialog {
-  transform: scale(0.95);
+    @apply scale-95;
 }
 
 /* Screens... */

@@ -15,9 +15,9 @@
 
         <div class="card">
             <div class="card-body">
-                <div class="form-row">
+                <div class="form-row md:grid-cols-2">
                     {{-- First Name --}}
-                    <div class="form-group required md:w-1/2 md:pr-2">
+                    <div class="form-group required">
                         <label for="first_name">{{ __('First Name') }}</label>
 
                         <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') ?? $user->first_name }}" required>
@@ -30,7 +30,7 @@
                     </div>
 
                     {{-- Last Name --}}
-                    <div class="form-group required md:w-1/2 md:pl-2">
+                    <div class="form-group required">
                         <label for="last_name">{{ __('Last Name') }}</label>
 
                         <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') ?? $user->last_name }}" required>

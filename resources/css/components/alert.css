@@ -1,10 +1,8 @@
 .alert {
-    @apply z-50 px-6 py-4 fixed flex items-center justify-between rounded invisible opacity-0;
+    @apply z-50 px-6 py-4 fixed flex items-center justify-between rounded invisible opacity-0 transform scale-75 transition-all ease-in-out duration-300;
     bottom: 0;
     left: 0;
     right: 0;
-    transform: scale(0.8);
-    transition: all 0.25s ease-in-out;
 
     /* purgecss start ignore */
     &.alert-danger {
@@ -25,8 +23,7 @@
     }
 
     &.alert.open {
-        @apply visible opacity-100;
-        transform: scale(1.0);
+        @apply visible opacity-100 scale-100;
     }
 }
 

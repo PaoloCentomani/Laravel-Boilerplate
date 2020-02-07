@@ -5,8 +5,7 @@
 }
 
 .nav-link {
-    @apply block py-2 text-gray-500;
-    transition: color 0.15s ease-in-out;
+    @apply block py-2 text-gray-500 transition-colors ease-in-out duration-150;
 
     &:focus {
         @apply text-gray-600;
