@@ -1,4 +1,4 @@
-@import 'flatpickr/dist/flatpickr';
+@import "flatpickr/dist/flatpickr";
 
 //  Fix for Google Chrome on Android...
 input[type="datetime-local"] {

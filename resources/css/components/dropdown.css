@@ -17,7 +17,7 @@ a.dropdown-item {
     }
 
     &:active {
-        @apply bg-blue-700;
-        transition: background ease-in-out 0.15s;
+        @apply bg-blue-700 ease-in-out duration-150;
+        transition-property: background;
     }
 }

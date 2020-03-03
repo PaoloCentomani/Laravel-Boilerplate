@@ -24,7 +24,7 @@ class UserController extends Controller
     {
         $users = new UsersQuery;
 
-        if ($users->count() === 1) {
+        if ($request->input('filter.s') && $users->count() === 1) {
             return redirect()->route('admin.users.show', $users->first());
         }
 
