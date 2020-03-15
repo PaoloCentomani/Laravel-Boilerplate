@@ -30,7 +30,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
  * Include SimpleBar, a lightweight custom scrollbar.
  *
- * @link http://grsmto.github.io/simplebar/
+ * @link https://grsmto.github.io/simplebar/
  */
 
 import 'simplebar';
