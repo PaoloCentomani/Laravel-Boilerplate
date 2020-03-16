@@ -1,6 +1,6 @@
 .modal {
     @apply flex flex-col items-center justify-center p-4 transition-opacity duration-200 ease-in-out;
-    background-color: color(theme('colors.black') a(50%));
+    background-color: theme('colors.black')8;
 
     .close {
         @apply -mr-4 px-4;
