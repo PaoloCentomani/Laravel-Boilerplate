@@ -1,4 +1,4 @@
-<script>
+<script defer>
     window.App = {
         Lang: {
             Close: '{{ __('Close') }}'

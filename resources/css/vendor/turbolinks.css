@@ -1,0 +1,5 @@
+.turbolinks-progress-bar {
+    @apply bg-blue-500;
+    height: 3px;
+    box-shadow: 0 0 10px theme('colors.blue.500');
+}

@@ -46,6 +46,17 @@ import flatpickr from 'flatpickr';
 flatpickr.localize(require('flatpickr/dist/l10n/it.js').default.it);
 
 /**
+ * Include Turbolinks: make navigating your application faster!
+ *
+ * @link https://github.com/turbolinks/turbolinks
+ */
+
+import Turbolinks from 'turbolinks';
+
+Turbolinks.start();
+Turbolinks.setProgressBarDelay(250);
+
+/**
  * Prevent opening links in Safari when in Web Clip mode.
  */
 

@@ -1,5 +1,6 @@
 /* purgecss start ignore */
 @import "vendor/flatpickr";
 @import "vendor/simplebar";
+@import "vendor/turbolinks";
 @import "vendor/vue";
 /* purgecss end ignore */

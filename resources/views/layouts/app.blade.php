@@ -8,8 +8,8 @@
     @include('shared.analytics')
 
     {{-- Styles --}}
-    <link rel="stylesheet" href="{{ mix('css/vendor.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/vendor.css') }}" data-turbolinks-track="reload">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" data-turbolinks-track="reload">
     @yield('styles')
 
     {{-- Web App --}}
@@ -21,6 +21,12 @@
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('head')
+
+    {{-- Scripts --}}
+    @include('shared.scripts')
+    <script src="{{ mix('js/manifest.js') }}" defer data-turbolinks-track="reload"></script>
+    <script src="{{ mix('js/vendor.js') }}" defer data-turbolinks-track="reload"></script>
+    <script src="{{ mix('js/app.js') }}" defer data-turbolinks-track="reload"></script>
 </head>
 <body class="font-sans bg-gray-100 {{ $classes }}">
     <div id="app" class="flex flex-col min-h-screen">
@@ -41,11 +47,7 @@
     </div>
 
     {{-- Scripts --}}
-    @include('shared.scripts')
-    <script src="{{ mix('js/manifest.js') }}" defer></script>
-    <script src="{{ mix('js/vendor.js') }}" defer></script>
     @yield('vendors')
-    <script src="{{ mix('js/app.js') }}" defer></script>
     @yield('scripts')
 </body>
 </html>

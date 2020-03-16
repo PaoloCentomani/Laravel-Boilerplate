@@ -9,6 +9,16 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 /**
+ * Make Vue and Turbolinks work together.
+ *
+ * @link https://github.com/jeffreyguenther/vue-turbolinks
+ */
+
+import TurbolinksAdapter from 'vue-turbolinks';
+
+Vue.use(TurbolinksAdapter)
+
+/**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
@@ -36,11 +46,13 @@ Vue.directive('focus', require('./directives/Focus.js'));
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
+document.addEventListener('turbolinks:load', () => {
+    const app = new Vue({
+        el: '#app',
 
-    data: {
-        isModalOpen: false,
-        isNavOpen: false
-    }
+        data: {
+            isModalOpen: false,
+            isNavOpen: false
+        }
+    });
 });

@@ -7,6 +7,7 @@
 * [Tailwind CSS](https://tailwindcss.com/) UI with [Bootstrap](https://getbootstrap.com/)-like classes
 * Ready-made [Vue.js](https://vuejs.org/) components: alerts, date/time pickers, dropdowns, modals, tabs, toggle password
 * Lightweight, well-mantained JavaScript plugins: [flatpickr](https://flatpickr.js.org/), [SimpleBar](http://grsmto.github.io/simplebar/)
+* [Turbolinks](https://github.com/turbolinks/turbolinks) for fast navigation
 * Useful Blade directives: `@svg`, `@widget`
 * Roles and permissions using [Laravel Permission](https://docs.spatie.be/laravel-permission/v3/introduction/)
 * Filtering with [Laravel Query Builder](https://docs.spatie.be/laravel-query-builder/v2/introduction/)
