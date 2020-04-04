@@ -10,13 +10,13 @@
         </h1>
 
         <div class="flex justify-between mt-2 md:mt-0">
-            <form method="GET" action="{{ route('admin.users.index') }}" class="search-form md:mr-4" autocomplete="off">
+            <form method="GET" action="{{ route('backend.users.index') }}" class="search-form md:mr-4" autocomplete="off">
                 <input type="search" class="form-control" name="filter[s]" minlength="3" aria-label="@lang('messages.cruds.actions.search')">
                 @svg('search', trans('messages.cruds.actions.search'), 'w-5 h-5 fill-current')
             </form>
 
             <div class="actions">
-                <a class="btn" href="{{ route('admin.users.create') }}">
+                <a class="btn" href="{{ route('backend.users.create') }}">
                     @svg('create', trans('messages.cruds.actions.create'), 'w-5 h-5 fill-current')
                     @lang('messages.cruds.actions.create')
                 </a>
@@ -49,7 +49,7 @@
                         <tr class="{{ $user->trashed() ? 'line-through text-gray-500' : '' }}">
                             <th scope="row">{{ $user->id }}</th>
                             <td>
-                                <a href="{{ route('admin.users.show', $user) }}">{{ $user->fullName }}</a>
+                                <a href="{{ route('backend.users.show', $user) }}">{{ $user->full_name }}</a>
                             </td>
                             <td>{{ $user->email }}</td>
                             <td>
@@ -63,20 +63,20 @@
                             <td>
                                 <div class="links">
                                     @if ($user->trashed())
-                                    <form method="POST" action="{{ route('admin.users.restore', $user->id) }}">
+                                    <form method="POST" action="{{ route('backend.users.restore', $user->id) }}">
                                         @csrf
                                         @method('PATCH')
 
-                                        <a href="javascript:" onclick="confirm('{{ __('Confirm restoring :name?', ['name' => $user->fullName]) }}') && this.parentNode.submit()" class="cursor-pointer">
+                                        <a href="javascript:" onclick="confirm('{{ __('Confirm restoring :name?', ['name' => $user->full_name]) }}') && this.parentNode.submit()" class="cursor-pointer">
                                             @svg('restore', trans('messages.cruds.actions.restore'))
                                         </a>
                                     </form>
                                     @else
-                                    <a href="{{ route('admin.users.show', $user) }}">
+                                    <a href="{{ route('backend.users.show', $user) }}">
                                         @svg('show', trans('messages.cruds.actions.show'))
                                     </a>
 
-                                    <a href="{{ route('admin.users.edit', $user) }}">
+                                    <a href="{{ route('backend.users.edit', $user) }}">
                                         @svg('edit', trans('messages.cruds.actions.edit'))
                                     </a>
                                     @endif

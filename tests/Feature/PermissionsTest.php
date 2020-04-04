@@ -44,7 +44,7 @@ class PermissionsTest extends TestCase
             factory(User::class)->state('administrator')->create()
         );
 
-        $this->get(route('admin.home'))
+        $this->get(route('backend.home'))
              ->assertOk();
     }
 
@@ -85,7 +85,7 @@ class PermissionsTest extends TestCase
      */
     public function testUserMustLoginToAccessAdminDashboard()
     {
-        $this->get(route('admin.home'))
+        $this->get(route('backend.home'))
              ->assertRedirect(route('login'));
     }
 
@@ -100,7 +100,7 @@ class PermissionsTest extends TestCase
             factory(User::class)->state('user')->create()
         );
 
-        $this->get(route('admin.home'))
+        $this->get(route('backend.home'))
              ->assertForbidden();
     }
 }

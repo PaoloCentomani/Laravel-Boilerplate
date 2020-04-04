@@ -9,7 +9,7 @@
     </h1>
 
     {{-- Form --}}
-    <form method="POST" action="{{ route('admin.users.store') }}" autocomplete="off" v-submit>
+    <form method="POST" action="{{ route('backend.users.store') }}" autocomplete="off" v-submit>
         @csrf
 
         <div class="card">

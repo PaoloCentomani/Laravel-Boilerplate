@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $user->fullName)
+@section('title', $user->full_name)
 
 @section('content')
 <div class="container mx-auto">
@@ -10,12 +10,12 @@
         </h1>
 
         <div class="actions">
-            <a class="btn mr-2" href="{{ route('admin.users.edit', $user) }}">
+            <a class="btn mr-2" href="{{ route('backend.users.edit', $user) }}">
                 @svg('edit', trans('messages.cruds.actions.edit'), 'w-5 h-5 fill-current')
                 @lang('messages.cruds.actions.edit')
             </a>
 
-            <form method="POST" action="{{ route('admin.users.destroy', $user) }}" v-submit="'{{ __('Confirm deleting :name?', ['name' => $user->fullName]) }}'">
+            <form method="POST" action="{{ route('backend.users.destroy', $user) }}" v-submit="'{{ __('Confirm deleting :name?', ['name' => $user->full_name]) }}'">
                 @csrf
                 @method('DELETE')
 

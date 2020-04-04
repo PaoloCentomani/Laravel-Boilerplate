@@ -30,6 +30,8 @@
     }
 }
 
+/* Checkboxes... */
+
 .custom-checkbox {
     .custom-control-label::before {
         @apply rounded;
@@ -53,6 +55,8 @@
         }
     }
 }
+
+/* Select Fields... */
 
 .custom-select {
     @apply bg-no-repeat;

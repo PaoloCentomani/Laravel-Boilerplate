@@ -39,7 +39,7 @@ class ProfileController extends Controller
         }
 
         if ($password = $request->input('password')) {
-            $user->forceFill(['password' => Hash::make($password)]);
+            $user->fill(['password' => Hash::make($password)]);
         }
 
         $user->fill($request->only('email'))

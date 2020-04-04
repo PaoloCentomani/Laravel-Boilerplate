@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Queries\Admin\UsersQuery;
-use App\Http\Requests\Admin\StoreUser;
-use App\Http\Requests\Admin\UpdateUser;
+use App\Http\Queries\Backend\UsersQuery;
+use App\Http\Requests\Backend\StoreUser;
+use App\Http\Requests\Backend\UpdateUser;
 use App\User;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\Request;
@@ -25,10 +25,10 @@ class UserController extends Controller
         $users = new UsersQuery;
 
         if ($request->input('filter.s') && $users->count() === 1) {
-            return redirect()->route('admin.users.show', $users->first());
+            return redirect()->route('backend.users.show', $users->first());
         }
 
-        return view('admin.users.index', [
+        return view('backend.users.index', [
             'search' => $request->input('filter.s'),
             'users' => $users->paginate()->appends($request->query()),
         ]);
@@ -43,7 +43,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
 
-        return view('admin.users.create', [
+        return view('backend.users.create', [
             'roles' => $roles,
         ]);
     }
@@ -51,7 +51,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Admin\StoreUser  $request
+     * @param  \App\Http\Requests\Backend\StoreUser  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreUser $request)
@@ -67,10 +67,10 @@ class UserController extends Controller
         $user->assignRole($request->input('role_id'));
 
         flash()->success(
-            __(':name has been created!', ['name' => $user->fullName])
+            __(':name has been created!', ['name' => $user->full_name])
         );
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('backend.users.index');
     }
 
     /**
@@ -81,7 +81,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('admin.users.show', [
+        return view('backend.users.show', [
             'user' => $user,
         ]);
     }
@@ -96,7 +96,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
 
-        return view('admin.users.edit', [
+        return view('backend.users.edit', [
             'roles' => $roles,
             'user' => $user,
         ]);
@@ -105,7 +105,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Admin\UpdateUser  $request
+     * @param  \App\Http\Requests\Backend\UpdateUser  $request
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
@@ -124,10 +124,10 @@ class UserController extends Controller
              ->save();
 
         flash()->success(
-            __(':name has been updated!', ['name' => $user->fullName])
+            __(':name has been updated!', ['name' => $user->full_name])
         );
 
-        return redirect()->route('admin.users.show', $user);
+        return redirect()->route('backend.users.show', $user);
     }
 
     /**
@@ -141,10 +141,10 @@ class UserController extends Controller
         $user->delete();
 
         flash()->warning(
-            __(':name has been deleted!', ['name' => $user->fullName])
+            __(':name has been deleted!', ['name' => $user->full_name])
         );
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('backend.users.index');
     }
 
     /**
@@ -158,9 +158,9 @@ class UserController extends Controller
         $user = tap(User::onlyTrashed()->findOrFail($id))->restore();
 
         flash()->warning(
-            __(':name has been restored!', ['name' => $user->fullName])
+            __(':name has been restored!', ['name' => $user->full_name])
         );
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('backend.users.index');
     }
 }

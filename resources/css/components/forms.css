@@ -21,7 +21,7 @@
         @apply outline-none border-blue-300 shadow-outline;
     }
 
-    &[readonly] {
+    &[readonly="true"] {
         @apply cursor-not-allowed;
     }
 }

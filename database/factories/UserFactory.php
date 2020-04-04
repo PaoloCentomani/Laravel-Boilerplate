@@ -28,7 +28,6 @@ $factory->define(User::class, function (Faker $faker) {
     ];
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | Factory States
@@ -36,16 +35,16 @@ $factory->define(User::class, function (Faker $faker) {
 */
 
 $factory->state(User::class, 'super administrator', [])
-        ->afterCreatingState(User::class, 'super administrator', function ($user) {
-            $user->assignRole('super administrator');
-        });
+    ->afterCreatingState(User::class, 'super administrator', function ($user) {
+        $user->assignRole('super administrator');
+    });
 
 $factory->state(User::class, 'administrator', [])
-        ->afterCreatingState(User::class, 'administrator', function ($user) {
-            $user->assignRole('administrator');
-        });
+    ->afterCreatingState(User::class, 'administrator', function ($user) {
+        $user->assignRole('administrator');
+    });
 
 $factory->state(User::class, 'user', [])
-        ->afterCreatingState(User::class, 'user', function ($user) {
-            $user->assignRole('user');
-        });
+    ->afterCreatingState(User::class, 'user', function ($user) {
+        $user->assignRole('user');
+    });

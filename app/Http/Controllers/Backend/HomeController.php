@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Backend;
 
-use App\User;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -14,6 +13,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        return view('backend.home');
     }
 }

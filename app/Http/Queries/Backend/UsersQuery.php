@@ -2,22 +2,13 @@
 
 namespace App\Http\Queries\Admin;
 
-use App\Filters\FiltersMultipleFields;
+use App\Filters\FuzzyFilter;
 use App\User;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class UsersQuery extends QueryBuilder
 {
-    /**
-     * The attributes that are searchable.
-     *
-     * @var array
-     */
-    protected $searchables = [
-        'email', 'first_name', 'last_name',
-    ];
-
     /**
      * Create a new query instance.
      *
@@ -29,10 +20,14 @@ class UsersQuery extends QueryBuilder
             User::with('roles')->withTrashed()
         );
 
-        $this->defaultSort('-created_at')
-            ->allowedSorts('created_at', 'id')
+        $this->allowedSorts('created_at', 'id')
+            ->defaultSort('-created_at')
             ->allowedFilters([
-                AllowedFilter::custom('s', new FiltersMultipleFields, implode(',', $this->searchables))
+                AllowedFilter::custom('s', new FuzzyFilter(
+                    'email',
+                    'first_name',
+                    'last_name',
+                ))
             ]);
     }
 }

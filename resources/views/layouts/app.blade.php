@@ -7,6 +7,10 @@
     <title>@hasSection('title') @yield('title') · {{ config('app.name') }} @else {{ config('app.name') }} @endif</title>
     @include('shared.analytics')
 
+    {{-- Google Fonts --}}
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     {{-- Styles --}}
     <link rel="stylesheet" href="{{ mix('css/vendor.css') }}" data-turbolinks-track="reload">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" data-turbolinks-track="reload">
@@ -28,7 +32,7 @@
     <script src="{{ mix('js/vendor.js') }}" defer data-turbolinks-track="reload"></script>
     <script src="{{ mix('js/app.js') }}" defer data-turbolinks-track="reload"></script>
 </head>
-<body class="font-sans bg-gray-100 {{ $classes }}">
+<body class="font-sans text-base bg-gray-100 {{ $classes }}">
     <div id="app" class="flex flex-col min-h-screen">
         @section('header')
         <header class="app-header">

@@ -28,13 +28,15 @@ set('writable_use_sudo', true);
 
 // Hosts.
 
-host('example.com')
-    ->stage('production')
-    ->set('deploy_path', '/var/www/{{application}}');
+host('production')
+    ->hostname('example.com')
+    ->set('deploy_path', '/var/www/{{application}}')
+    ->stage('production');
 
-host('example.com')
-    ->stage('staging')
-    ->set('deploy_path', '/var/www/staging.{{application}}');
+host('staging')
+    ->hostname('example.com')
+    ->set('deploy_path', '/var/www/staging.{{application}}')
+    ->stage('staging');
 
 // Tasks.
 

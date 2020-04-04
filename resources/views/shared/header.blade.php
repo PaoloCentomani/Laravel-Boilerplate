@@ -16,13 +16,13 @@
             {{-- Left Side Of Navbar --}}
             <ul class="navbar-nav text-sm text-left sm:flex-auto sm:ml-12">
                 @can('view backend')
-                <li class="nav-item{{ active('admin.home') }}">
-                    <a class="nav-link" href="{{ route('admin.home') }}">
+                <li class="nav-item{{ active('backend.home') }}">
+                    <a class="nav-link" href="{{ route('backend.home') }}">
                         {{ __('Dashboard') }}
                     </a>
                 </li>
-                <li class="nav-item{{ active('admin.users.*') }}">
-                    <a class="nav-link" href="{{ route('admin.users.index') }}">
+                <li class="nav-item{{ active('backend.users.*') }}">
+                    <a class="nav-link" href="{{ route('backend.users.index') }}">
                         {{ ucfirst(trans('messages.users.plural')) }}
                     </a>
                 </li>
@@ -43,7 +43,7 @@
                     <v-dropdown id="navbar-dropdown" align="right" class="nav-item block sm:inline-block mt-4 sm:mt-0">
                         <template v-slot:toggle>
                             <img class="mr-2 rounded-circle gravatar" src="{{ $currentUser->gravatar }}" width="28" height="28">
-                            {{ $currentUser->fullName }}
+                            {{ $currentUser->full_name }}
                             @svg('dropdown', __('Toggle Menu'), 'w-3 h-3 ml-2 fill-current')
                         </template>
 

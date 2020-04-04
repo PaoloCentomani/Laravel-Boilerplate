@@ -66,8 +66,9 @@
 
         mounted() {
             this.picker = flatpickr(this.$el, {
+                allowInput: true,
                 altInput: true,
-                altInputClass: 'form-control cursor-default',
+                altInputClass: 'form-control cursor-pointer',
                 altFormat: this.enableTime ? 'j F Y H:i' : 'j F Y',
                 ariaDateFormat: this.enableTime ? 'j F Y H:i' : 'j F Y',
                 dateFormat: this.enableTime ? 'Y-m-d H:i' : 'Y-m-d',
@@ -78,7 +79,14 @@
                     confirmText: App.Lang.Close
                 })] : [],
                 time_24hr: true,
-                wrap: true
+                wrap: true,
+                onOpen: (selectedDates, dateStr, instance) => {
+                    instance.altInput.setAttribute('readonly', true);
+                },
+                onClose: (selectedDates, dateStr, instance) => {
+                    instance.altInput.setAttribute('readonly', false);
+                    instance.altInput.blur();
+                }
             });
         },
 
@@ -92,15 +100,13 @@
 </script>
 
 <style>
-    .form-control {
-        &:hover + .close,
-        &:focus + .close {
-            @apply flex;
-        }
+    .form-control:hover + .close,
+    .form-control:focus + .close {
+        @apply flex;
+    }
 
-        &[readonly] {
-            @apply cursor-text;
-        }
+    .form-control[readonly] {
+        @apply cursor-text;
     }
 
     .close:hover {

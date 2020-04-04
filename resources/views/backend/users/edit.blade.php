@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $user->fullName)
+@section('title', $user->full_name)
 
 @section('content')
 <div class="container mx-auto">
@@ -9,7 +9,7 @@
     </h1>
 
     {{-- Form --}}
-    <form method="POST" action="{{ route('admin.users.update', $user) }}" autocomplete="off" v-submit>
+    <form method="POST" action="{{ route('backend.users.update', $user) }}" autocomplete="off" v-submit>
         @csrf
         @method('PUT')
 

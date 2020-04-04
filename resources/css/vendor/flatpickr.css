@@ -1,6 +1,6 @@
 @import "flatpickr/dist/flatpickr";
 
-//  Fix for Google Chrome on Android...
+// Fix for Google Chrome on Android...
 input[type="datetime-local"] {
     @apply bg-white;
 }
@@ -30,8 +30,18 @@ span.flatpickr-weekday {
 }
 
 .flatpickr-day {
-    &:hover {
-        @apply bg-gray-300 border-gray-300;
+    &:hover,
+    &.today:hover {
+        @apply text-gray-900 bg-gray-300 border-gray-300;
+    }
+
+    &.prevMonthDay:not(.flatpickr-disabled),
+    &.nextMonthDay:not(.flatpickr-disabled) {
+        @apply text-gray-400;
+
+        &:hover {
+            @apply text-gray-400 bg-transparent border-gray-400;
+        }
     }
 
     &.selected {
@@ -42,13 +52,8 @@ span.flatpickr-weekday {
         }
     }
 
-    &.prevMonthDay,
-    &.nextMonthDay {
-        @apply text-gray-400;
-
-        &:hover {
-            @apply text-gray-400 bg-transparent border-gray-400;
-        }
+    &.today {
+        @apply font-semibold border-none;
     }
 }
 
