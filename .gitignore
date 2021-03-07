@@ -1,5 +1,9 @@
 /node_modules
+/public/css
 /public/hot
+/public/img
+/public/js
+/public/mix-manifest.json
 /public/storage
 /public/vendor/telescope
 /storage/*.key

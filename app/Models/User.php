@@ -71,4 +71,14 @@ class User extends Authenticatable
     {
         return "{$this->first_name} {$this->last_name}";
     }
+
+    /**
+     * Get the default profile photo URL if no profile photo has been uploaded.
+     *
+     * @return string
+     */
+    protected function defaultProfilePhotoUrl()
+    {
+        return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?s=256&d=' . urlencode('https://eu.ui-avatars.com/api/' . urlencode($this->name) . '/256/6875f5/ffffff');
+    }
 }
