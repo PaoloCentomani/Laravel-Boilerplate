@@ -73,6 +73,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Is the user an administrator?
+     *
+     * @return bool
+     */
+    public function isAdministrator()
+    {
+        return $this->hasRole('Administrator');
+    }
+
+    /**
      * Get the default profile photo URL if no profile photo has been uploaded.
      *
      * @return string

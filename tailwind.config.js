@@ -9,6 +9,8 @@ module.exports = {
         './resources/views/**/*.blade.php',
     ],
 
+    darkMode: false,
+
     theme: {
         extend: {
             colors: {
@@ -22,7 +24,7 @@ module.exports = {
 
     variants: {
         extend: {
-            opacity: ['disabled'],
+            //
         },
     },
 

@@ -10,15 +10,16 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.2.1",
+        "@tailwindcss/forms": "^0.3.2",
+        "@tailwindcss/jit": "^0.1.18",
         "@tailwindcss/typography": "^0.4.0",
-        "alpinejs": "^2.8.1",
-        "autoprefixer": "^10.2.5",
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.13",
+        "alpinejs": "^2.8.2",
+        "axios": "^0.21.1",
+        "laravel-mix": "^6.0.16",
         "lodash": "^4.17.21",
-        "postcss": "^8.2.7",
-        "postcss-import": "^14.0.0",
-        "tailwindcss": "^2.0.3"
+        "postcss": "^8.2.10",
+        "postcss-import": "^14.0.1",
+        "postcss-nested": "^5.0.5",
+        "tailwindcss": "^2.1.1"
     }
 }

@@ -1,10 +1,9 @@
 const mix = require('laravel-mix');
 
 const plugins = [
-    require('autoprefixer'),
+    require('@tailwindcss/jit'),
     require('postcss-import'),
     require('postcss-nested'),
-    require('tailwindcss'),
 ];
 
 /*

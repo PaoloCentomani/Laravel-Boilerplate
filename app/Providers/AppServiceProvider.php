@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        setlocale(LC_TIME, config('boilerplate.php_locale'));
+        setlocale(LC_TIME, config('settings.php_locale'));
 
         Carbon::setLocale(config('app.locale'));
     }
