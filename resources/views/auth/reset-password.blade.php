@@ -13,20 +13,20 @@
 
             <div class="block">
                 <x-jet-label for="email" value="{{ __('E-Mail') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+                <x-jet-input id="email" class="block w-full mt-1 text-gray-400 bg-gray-100 cursor-not-allowed" type="email" name="email" :value="old('email', $request->email)" required readonly />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-label for="password" value="{{ __('New Password') }}" />
+                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required autofocus autocomplete="new-password" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end pt-6 mt-6 border-t border-gray-100">
                 <x-jet-button>
                     {{ __('Reset Password') }}
                 </x-jet-button>
