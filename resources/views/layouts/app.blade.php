@@ -46,6 +46,17 @@
         </div>
 
         <livewire:scripts />
+        <script defer>
+            livewire.onError(function (statusCode) {
+                if (statusCode === 419) {
+                    if (confirm('{{ __('This page has expired due to inactivity.\nWould you like to refresh the page?') }}')) {
+                        location.reload();
+                    }
+
+                    return false;
+                }
+            });
+        </script>
         @stack('modals')
     </body>
 </html>

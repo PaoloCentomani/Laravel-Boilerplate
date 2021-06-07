@@ -146,6 +146,7 @@
     "This action is unauthorized.": "Non sei autorizzato.",
     "This device": "Questo dispositivo",
     "This is a secure area of the application. Please confirm your password before continuing.": "Questa è un’area protetta dell’applicazione. Cconferma la tua password per proseguire.",
+    "This page has expired due to inactivity.\\nWould you like to refresh the page?": "Questa pagina è scaduta per inattività.\\nVuoi ricaricare la pagina?",
     "This password does not match our records.": "Questa password non è stata riconosciuta.",
     "This password reset link will expire in :count minutes.": "Questo link scadrà tra :count minuti.",
     "This user already belongs to the team.": "Questo utente è già membro del team.",
