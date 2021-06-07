@@ -18,12 +18,12 @@
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('New Password') }}" />
-                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autofocus autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required autofocus autocomplete="new-password" />
+                <x-jet-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             <div class="flex items-center justify-end pt-6 mt-6 border-t border-gray-100">

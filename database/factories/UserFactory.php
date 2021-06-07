@@ -77,4 +77,16 @@ class UserFactory extends Factory
             fn (User $user) => $user->assignRole('Administrator')
         );
     }
+
+    /**
+     * Indicate that the user is a standard user.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function user()
+    {
+        return $this->afterCreating(
+            fn (User $user) => $user->assignRole('User')
+        );
+    }
 }

@@ -31,6 +31,7 @@ return [
     ],
     'boolean' => 'Il campo :attribute deve essere vero o falso.',
     'confirmed' => 'La conferma del campo :attribute non corrisponde.',
+    'current_password' => 'La password non è corretta.',
     'date' => 'Il campo :attribute non è una data valida.',
     'date_equals' => 'Il campo :attribute deve essere una data pari a :date.',
     'date_format' => 'Il campo :attribute deve essere nel formato :format.',
@@ -119,7 +120,7 @@ return [
     'timezone' => 'Il campo :attribute deve essere un fuso orario valido.',
     'unique' => 'Il campo :attribute è stato già utilizzato.',
     'uploaded' => 'Il caricamento del campo :attribute è fallito.',
-    'url' => 'Il formato del campo :attribute non è valido.',
+    'url' => 'Il campo :attribute non è un URL valido.',
     'uuid' => 'Il campo :attribute deve essere un UUID valido.',
 
     /*

@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ $title }}</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
 
         {{-- Google Fonts --}}
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,6 +47,18 @@
         </div>
 
         <livewire:scripts />
+        <script defer>
+            livewire.onError(function (statusCode) {
+                if (statusCode === 419) {
+                    if (confirm('{{ __('This page has expired due to inactivity.\nWould you like to refresh the page?') }}')) {
+                        location.reload();
+                    }
+
+                    return false;
+                }
+            });
+        </script>
         @stack('modals')
+        @stack('scripts')
     </body>
 </html>

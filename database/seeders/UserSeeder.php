@@ -26,5 +26,7 @@ class UserSeeder extends Seeder
         foreach ($this->administrators as $user) {
             User::factory()->administrator()->create($user);
         }
+
+        User::factory()->times(15)->user()->create();
     }
 }

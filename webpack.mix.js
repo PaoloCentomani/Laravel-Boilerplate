@@ -2,7 +2,7 @@ const mix = require('laravel-mix');
 
 const plugins = [
     require('postcss-import'),
-    require('postcss-nested'),
+    require('tailwindcss/nesting'),
     require('tailwindcss'),
 ];
 
